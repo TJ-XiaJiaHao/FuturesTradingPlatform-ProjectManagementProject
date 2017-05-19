@@ -1,0 +1,59 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    height:100%;
+    widht:100%;
+    font-family: Axure Handwriting;
+}
+
+
+
+/*变量声明*/
+:root{
+    --min-width:1000px;
+    --width-per:85%;
+}
+
+
+
+
+
+/*header*/
+.height
+{
+    height: 50px;
+    width:100%;
+    min-width: var(--min-width);
+}
+.title{
+    height: 43px;
+    width: 75%;
+    min-width: var(--min-width);
+    text-align: center;
+    padding: 0 15px;
+}
+
+.title h4{
+    background: #efefef;
+    line-height: 43px;
+}
+
+
+
+
+/*footer*/
+
+#footer{
+    height:200px;
+    width:100%;
+    background:#363A53 ;
+    color:white;
+    font-size:30px;
+}
+#footer-con{
+    display: inline-block;
+    margin-left:10%;
+    margin-top:2%
+}

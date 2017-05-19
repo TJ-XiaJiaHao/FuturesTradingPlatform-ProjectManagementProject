@@ -1,0 +1,59 @@
+.account_info_area {
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.search-icon {
+    top: 0 !important;
+}
+.mainFrame{
+    margin-top:50px;
+}
+.account_info_area{
+    float:left;
+    width:72%;
+    margin:0;
+    margin-left:15px;
+    border-radius: 5px;
+    height:800px;
+}
+.search-option {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.search-option div {
+    margin-left: 50px;
+    line-height: 35px;
+}
+
+.search-option label {
+    margin-left: 20px;
+    line-height: 35px;
+}
+
+.search-option span {
+    margin-right: 50px;
+    z-index: 3;
+    height: 35px;
+    float: right;
+    line-height: 35px;
+    cursor: pointer;
+}
+
+.search-input {
+    border-radius: 0 !important;
+    margin-right: -20px !important;
+    width: 25% !important;
+    float: right !important;
+}
+
+.trading-record-table {
+    margin: 50px auto;
+    width: 90%;
+}
+
+.trading-record-table thead {
+    color: antiquewhite;
+    background: #555555;
+}

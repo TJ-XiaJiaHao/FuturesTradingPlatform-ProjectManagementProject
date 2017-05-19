@@ -1,0 +1,50 @@
+@charset "utf-8";
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.inputElem {
+    width: 198px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #ccc;
+}
+
+.parentCls {
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.auto-tip li {
+    padding-left: 10px;
+    width: 100%;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    background: white;
+}
+
+.auto-tip li.hoverBg {
+    background: #ddd;
+    cursor: pointer;
+}
+
+.auto-tip li em {
+    font-style: normal;
+}
+
+.red {
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}

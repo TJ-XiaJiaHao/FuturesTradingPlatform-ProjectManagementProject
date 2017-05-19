@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Homepage</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css"/>
+    <link rel="stylesheet" href="stylesheets/public.css"/>
+    <link rel="stylesheet" href="stylesheets/trade_home.css"/>
+
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/echarts.js"></script>
+    <script src="javascripts/ejs.js"></script>
+    <script src="javascripts/utility.js"></script>
+    <script src="javascripts/trade_home.js"></script>
+</head>
+<body>
+
+<!--nav-->
+<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <li><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+            </ul>
+            <label class="username-label welcome none">Welcome<span id="username-span"></span></label>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog">Register</label>
+            <label class="username-label login none" data-toggle="modal" data-target="#login-dialog">Login</label>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div id="body">
+    <div id="dv-top">
+        <div id="contract-basic-info">
+            <ul id="contract-basic-info-header">
+                <li>名称</li>
+                <li>卖价</li>
+                <li>买价</li>
+                <li>手续费</li>
+            </ul>
+            <div id="contract-basic-info-con">
+            </div>
+        </div>
+        <ul id="contract-kline">
+        </ul>
+
+        <div id="contract-op">
+            <h3 id="contract-op-name">伦敦金</h3>
+            <div id="contract-op-sell-info">
+                <label id="contract-op-sell-price">1172.72</label>
+                <img id="contract-op-sell-info-img" src="images/priceUp.png"/>
+                <label id="contract-op-sell-info-price-up">2.37</label>
+                <label id="contract-op-sell-info-price-per">0.20%</label>
+            </div>
+            <div id="contract-op-button">
+                <div id="contract-op-button-sell">
+                    <label class="name">卖</label>
+                    <label class="price">1172.47</label>
+                </div>
+                <div id="contract-op-button-buy">
+                    <label class="price">1172.97</label>
+                    <label class="name">买</label>
+                </div>
+            </div>
+            <div id="contract-op-config">
+                <div id="config-top">
+                    <label id="config-open">一击开仓</label>
+                    <label id="config-hands-label">手数</label>
+                    <input id="config-hands-text" type="number" value="1" min="0" step="0.01"/>
+                    <label id="config-range-label">成交范围</label>
+                    <input id="config-range-text" type="number" value="500" min="0" step="5"/>
+                </div>
+                <div id="config-bottom">
+                    <label class="config-step">1</label>
+                    <label class="config-step">0.01</label>
+                    <label class="config-step">0.05</label>
+                    <label class="config-step">0.10</label>
+                    <label class="config-step">0.50</label>
+                </div>
+            </div>
+            <div id="contract-op-trade-info">
+                <label class="op-trade-info-name">最高</label>
+                <label class="op-trade-info-value" id="op-trade-info-highest">1175.43</label>
+                <label class="op-trade-info-name">开盘</label>
+                <label class="op-trade-info-value" id="op-trade-info-begin">1170.69</label>
+                <label class="op-trade-info-name">最低</label>
+                <label class="op-trade-info-value" id="op-trade-info-lowest">1169.59</label>
+                <label class="op-trade-info-name">昨收</label>
+                <label class="op-trade-info-value">1170.35</label>
+                <label class="op-trade-info-name">买利率</label>
+                <label class="op-trade-info-value">-1.25%</label>
+                <label class="op-trade-info-name">卖利率</label>
+                <label class="op-trade-info-value">-0.75%</label>
+            </div>
+            <div id="contract-op-trade-history">
+                <div id="contract-op-history-header">
+                    <label id="history-title-time">时间（北京）</label>
+                    <label id="history-title-price">价格</label>
+                </div>
+                <div id="contract-op-history-con"></div>
+            </div>
+        </div>
+    </div>
+    <div id="account-info">
+        <div id="account-header">账户信息</div>
+        <div id="account-body">
+            <div id="account-basic-info">
+                <label class="account-basic-info-name">账户</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">余额</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">净值</label>
+                <label class="account-basic-info-value" id="netWorth"></label>
+                <label class="account-basic-info-name">持仓保证金</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">占用保证金</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">可用资金</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">总净盈亏</label>
+                <label class="account-basic-info-value" id="profit"></label>
+                <label class="account-basic-info-name">保证金水平</label>
+                <label class="account-basic-info-value"></label>
+            </div>
+            <div id="account-total-info">
+                <ul id="account-total-info-header">
+                    <li>持仓</li>
+                    <li>当日成交</li>
+                    <li>当日盈亏</li>
+                </ul>
+                <ul id="account-total-info-body">
+                    <li id="handing-li" class="account-total-info-body-li">
+                        <div id="dv-handing-table">
+                            <table id="handing-table" border="1">
+                                <tr id="handing-title-head">
+                                    <td class="handing-title-th">产品</td>
+                                    <td class="handing-title-th">方向</td>
+                                    <td class="handing-title-th">手数</td>
+                                    <td class="handing-title-th">开仓价</td>
+                                    <td class="handing-title-th">平仓价</td>
+                                    <td class="handing-title-th">止损</td>
+                                    <td class="handing-title-th">止盈</td>
+                                    <td class="handing-title-th">点差回赠</td>
+                                    <td class="handing-title-th">利息</td>
+                                    <td class="handing-title-th">盈亏</td>
+                                    <td class="handing-title-th">开仓时间</td>
+                                    <td class="handing-title-th">持仓单号</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li id="done-li" class="account-total-info-body-li">
+                        <div id="dv-done-table">
+                            <table id="done-table" border="1">
+                                <tr id="done-title-head">
+                                    <td class="done-title-th">成交单号</td>
+                                    <td class="done-title-th">订单号</td>
+                                    <td class="done-title-th">产品</td>
+                                    <td class="done-title-th">类型</td>
+                                    <td class="done-title-th">类别</td>
+                                    <td class="done-title-th">方向</td>
+                                    <td class="done-title-th">手数</td>
+                                    <td class="done-title-th">点差回赠</td>
+                                    <td class="done-title-th">成交价</td>
+                                    <td class="done-title-th">成交时间</td>
+                                    <td class="done-title-th">备注</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li id="profile-li" class="account-total-info-body-li">
+                        <div id="dv-profile-table">
+                            <table id="profile-table" border="1">
+                                <tr id="profile-title-head">
+                                    <td class="profile-title-th">产品</td>
+                                    <td class="profile-title-th">开仓方向</td>
+                                    <td class="profile-title-th">手数</td>
+                                    <td class="profile-title-th">开仓价</td>
+                                    <td class="profile-title-th">平仓价</td>
+                                    <td class="profile-title-th">利息</td>
+                                    <td class="profile-title-th">点差回赠</td>
+                                    <td class="profile-title-th">盈亏</td>
+                                    <td class="profile-title-th">平仓单号</td>
+                                    <td class="profile-title-th">持仓单号</td>
+                                    <td class="profile-title-th">开仓时间</td>
+                                    <td class="profile-title-th">平仓时间</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="contract-detail">
+        <div id="contract-detail-header">合约详情</div>
+        <div id="contract-detail-table-dv">
+            <table id="contract-detail-table" border="1">
+                <tr>
+                    <td class="contract-detail-table-name" width="5%">交易品种</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">交易单位</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">报价单位</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">最小变动价位</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">涨跌停板幅度</td>
+                    <td width="27%"></td>
+                </tr>
+                <tr>
+                    <td class="contract-detail-table-name">合约交割月份</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">交易时间</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">最后交易日</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">最后交割日</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">交割品级</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="contract-detail-table-name">最低交易保证金</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">交易手续费</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">交割方式</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">交易代码</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">上市交易所</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--mask-->
+<div id="open-mask">
+    <div id="open-mask-box">
+        <div id="open-mask-box-title"><label>闪电下单</label></div>
+        <div id="open-mask--box-body">
+            <img src="images/打勾.png"/>
+            <h1 id="box-body-title">市价开仓成功</h1>
+            <hr>
+            <label>2016-12-06 16:39:36</label>
+            <hr>
+            <label>伦敦金 卖 1 手 @1172.47</label>
+            <hr>
+            <label>成交号：12793648</label>
+            <hr>
+        </div>
+        <button id="open-mask-box-btn">关闭</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,660 @@
+/*声明变量*/
+:root{
+    --border-style:1px solid gray;
+}
+body{
+    background: #000!important;
+}
+
+/*主体界面*/
+#body{
+    height:auto;
+    width:100%;
+    min-width: var(--min-width);
+    background: rgb(0,0,0);
+    margin-top:50px;
+    position: relative;
+    font-family:'仿宋';
+    font-size:16px;
+}
+
+
+
+/*dv-top，包括期货名称、k线图和买卖操作*/
+#dv-top{
+    height:450px;
+    width:100%;
+}
+
+
+
+
+/*期货基本信息小板块*/
+#contract-basic-info{
+    height:100%;
+    width:20%;
+    border:var(--border-style);
+    float:left;
+    overflow: hidden;
+}
+#contract-basic-info-header{
+    width:100%;
+    height:20px;
+}
+#contract-basic-info-header li,.contract-basic-info-con-item li{
+    list-style: none;
+    float:left;
+    text-align: left;
+    overflow: hidden;
+    color:white;
+    font-weight:500;
+}
+#contract-basic-info-header li:nth-of-type(1),.contract-basic-info-con-item li:nth-of-type(1){
+    width:30%;
+}
+#contract-basic-info-header li:nth-of-type(2),.contract-basic-info-con-item li:nth-of-type(2){
+    width:23%;
+}
+#contract-basic-info-header li:nth-of-type(3),.contract-basic-info-con-item li:nth-of-type(3){
+    width:23%;
+}
+#contract-basic-info-header li:nth-of-type(4),.contract-basic-info-con-item li:nth-of-type(4){
+    width:24%;
+    text-align: center;
+}
+#contract-basic-info-con{
+    height:90%;
+    width:100%;
+    overflow-y: auto;
+}
+
+.contract-basic-info-con-item{
+    width:100%;
+    height:auto;
+}
+.contract-basic-info-con-item li{
+    font-size:14px;
+    font-weight: 300;
+    height:30px;
+    line-height:30px;
+    cursor:pointer;
+    border:1px solid black;
+
+}
+.contract-basic-info-con-item:hover > li:nth-of-type(1),.contract-basic-info-con-item:hover > li:nth-of-type(4){
+    background: gray;
+}
+
+
+/*k线图板块*/
+#contract-kline-box{
+    width:60%;
+    height:100%;
+    float:left;
+    position: relative;
+}
+/*分析结果k线图*/
+#prediction-kline{
+    width:100%;
+    height:100%;
+    position: absolute;
+    z-index: -10;
+
+}
+/*合约历史记录k线图*/
+#min-select-dv{
+    position: absolute;
+    top:0;
+    left:60px;
+    width:400px;
+    height:50px;
+    color:#00B7FF;
+    z-index:100;
+}
+#min-select-dv ul{
+    width:100%;
+    height:100%;
+}
+#min-select-dv ul li{
+    list-style: none;
+    float:left;
+    cursor:pointer;
+    display: inline-block;
+    width:30px;
+    text-align: center;
+}
+#min-select-dv ul li:nth-of-type(1){
+    width:100px;
+}
+#min-select-dv ul li:nth-of-type(7){
+    width:40px;
+}
+#min-select-dv ul li:hover{
+    color:white;
+    background: #00B7FF;
+}
+#min-select-dv ul li:nth-of-type(1):hover{
+    color:#00B7FF;
+    background: none;
+}
+
+
+#contract-kline{
+    width:100%;
+    height:100%;
+    border:var(--border-style);
+}
+#contract-kline li{
+    list-style: none;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+
+/*买单卖单信息及买卖操作板块*/
+#contract-op{
+    width:20%;
+    height:100%;
+    border:var(--border-style);
+    float:left;
+}
+#contract-op-name{
+    width:100%;
+    height:5%;
+    color:white;
+    text-align: center;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+#contract-op-sell-info{
+    width:100%;
+    height:5%;
+    color:green;
+    overflow: hidden;
+}
+#contract-op-sell-price{
+    font-size:20px;
+    display: inline-block;
+    height:100%;
+    width:40%;
+    text-align: center;
+    float:left;
+}
+#contract-op-sell-info-img{
+    height:80%;
+    width:10%;
+    margin-top:5px;
+    float:left;
+}
+#contract-op-sell-info-price-up,#contract-op-sell-info-price-price{
+    display: inline-block;
+    width:40%;
+    height:100%;
+    text-align: center;
+    font-size:14px;
+    line-height: 30px;
+}
+#contract-op-button{
+    width:100%;
+    height:8%;
+    color:white;
+    margin-top:2%;
+}
+#contract-op-button-sell,#contract-op-button-buy{
+    width:46%;
+    min-width:60px;
+    height:100%;
+    margin-left:2%;
+    margin-right:2%;
+    background: green;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    cursor:pointer;
+    float:left;
+
+    line-height:35px;
+}
+.name{
+    width:28%;
+    text-align: center;
+    height:100%;
+    display: inline-block;
+    float:left;
+    cursor:pointer;
+}
+.price{
+    width:70%;
+    text-align: center;
+    height:100%;
+    display: inline-block;
+    float:left;
+    cursor: pointer;
+}
+#contract-op-config{
+    margin-top:2%;
+    width:100%;
+    height:12%;
+    background: #3F3F3F;
+    border:var(--border-style);
+}
+#config-top{
+    width:100%;
+    height:60%;
+}
+#config-open{
+    width:25%;
+    height:80%;
+    line-height:25px;
+    cursor:pointer;
+    margin-top:2px;
+    text-align: center;
+    color:white;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    font-weight:300;
+    background: rgb(233,165,4);
+    float:left;
+    margin-bottom:0;
+}
+#config-hands-label,#config-range-label{
+    width:14%;
+    min-width:20px;
+    height:60%;
+    margin-top:8px;
+    color:white;
+    font-weight:300;
+    font-size:10px;
+    float:left;
+    margin-left:3px;
+    text-align: center;
+    margin-bottom:0px;
+
+}
+#config-range-label{
+    width:16%;
+}
+#config-hands-text,#config-range-text{
+    width:19%;
+    height:60%;
+    margin-top:6px;
+    float:left;
+    margin-left:3px;
+}
+#config-bottom{
+    width:100%;
+    height:40%;
+}
+.config-step{
+    background: rgb(62,76,88);
+    color:white;
+    font-weight:300;
+    font-size:9px;
+    float:left;
+    display: inline-block;
+    height:80%;
+    margin-left:3px;
+    margin-bottom:0;
+    width:15%;
+    text-align: center;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    border:var(--border-style);
+    cursor:pointer;
+}
+#contract-op-trade-info{
+    height:15%;
+    width:100%;
+}
+.op-trade-info-name{
+    height:33%;
+    width:30%;
+    color:white;
+    display: inline-block;
+    float:left;
+    margin-bottom:0;
+    font-weight:400;
+    font-size:14px;
+}
+.op-trade-info-value{
+    height:33%;
+    width:20%;
+    color:white;
+    float:left;
+    margin-bottom:0;
+    display: inline-block;
+    font-weight:500;
+    font-size:10px;
+    line-height: 20px;
+}
+#op-trade-info-highest{
+    color: green;
+}
+#op-trade-info-begin{
+    color: green;
+}
+#op-trade-info-lowest{
+    color:red;
+}
+#contract-op-trade-history{
+    width:100%;
+    height:52%;
+    overflow: hidden;
+}
+#contract-op-history-header{
+    height:10%;
+    background: #5e5e5e;
+}
+#history-title-time{
+    color:white;
+    width:55%;
+    display: inline-block;
+    margin-top:3px;
+    height:80%;
+    float:left;
+}
+#history-title-price{
+    color:white;
+    margin-top:3px;
+    height:80%;
+    width:45%;
+    display: inline-block;
+    float:left;
+}
+#contract-op-history-con{
+    height:90%;
+    width:100%;
+    overflow: auto;
+}
+.history-con-time{
+    width:55%;
+    height:10%;
+    color:white;
+    font-weight:300;
+}
+.history-con-price{
+    width:25%;
+    height:10%;
+}
+.history-img{
+    width:10%;
+    height:10%;
+    font-weight:300;
+}
+
+
+
+
+
+/*账户信息模块*/
+#account-info{
+    height:200px;
+    width:100%;
+    border:var(--border-style);
+    margin-top:5px;
+    overflow: hidden;
+    min-width: var(--min-width);
+}
+#account-header,#contract-detail-header{
+    background: #5e5e5e;
+    color:white;
+    font-weight:500;
+    height:10%;
+    border:var(--border-style)
+}
+#account-body{
+    width:100%;
+    height:90%;
+}
+#account-basic-info{
+    height:100%;
+    width:15%;
+    border-right:var(--border-style);
+    float:left;
+
+}
+.account-basic-info-name,.account-basic-info-value{
+    display: inline-block;
+    width:40%;
+    height:12.5%;
+    float:left;
+    color:white;
+    font-weight:200;
+    font-size:12px;
+    border-bottom: 1px solid #101010;
+    margin-bottom:0px;
+}
+.account-basic-info-value{
+    width:60%;
+}
+#account-total-info{
+    height:100%;
+    width:85%;
+    float:left;
+}
+#account-total-info-header{
+    width:100%;
+    height:10%;
+    border:var(--border-style);
+    margin-bottom:0px;
+}
+#account-total-info-header li{
+    float:left;
+    height:100%;
+    width:10%;
+    border-right:var(--border-style);
+    list-style:none;
+    text-align:center;
+    color:white;
+    cursor:pointer;
+    font-size:14px;
+}
+#account-total-info-header li:nth-of-type(1){
+    background: #5e5e5e;
+}
+#account-total-info-header li:hover{
+    background: #5e5e5e;
+}
+#account-total-info-body{
+    height:90%;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+#account-total-info-body li{
+    list-style:none;
+    height:100%;
+    position: absolute;
+    width:100%;
+    color:white;
+    left:100%;
+    overflow: hidden;
+    font-size:12px;
+    font-weight:300;
+}
+#dv-handing-table,#dv-done-table{
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
+
+
+/*持仓小板块*/
+#handing-table,#done-table,#profile-table{
+    width:100%;
+    overflow: scroll;
+    text-align: center;
+    border:var(--border-style);
+    font-weight:300;
+    font-size:10px;
+}
+.handing-title-th,.done-title-th,.profile-title-th{
+    text-align: center;
+    font-weight:500;
+    font-size:12px;
+}
+
+
+
+
+/*合约详情板块*/
+#contract-detail{
+    width:100%;
+    height:200px;
+    margin-top:5px;
+}
+#contract-detail-table-dv{
+    width:100%;
+    height:90%;
+    overflow: hidden;
+}
+#contract-detail-table{
+    width:100%;
+    height:95%;
+    margin:0px auto;
+    color:white;
+    text-align: center;
+    font-size:10px;
+}
+.contract-detail-table-name{
+    background:#3F3F3F;
+}
+
+
+/*开仓蒙版*/
+#open-mask{
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    visibility: hidden;
+}
+#open-mask-box{
+    width:400px;
+    height:300px;
+    border:1px solid rgb(74,80,98);
+    background: rgb(0,0,0);
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    margin:15% auto;
+}
+#open-mask-box-title{
+    height:4%;
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    -webkit-box-shadow:  0 5px 10px rgb(74,80,98);
+    -moz-box-shadow:  0 5px 10px rgb(74,80,98);
+    box-shadow:  0 5px 10px rgb(74,80,98);
+    background: rgb(74,80,98);
+}
+#open-mask-box-title label{
+    margin-left:10px;
+    color:white;
+    font-weight:300;
+    margin-top:2px;
+}
+#open-mask--box-body{
+    width:60%;
+    height:70%;
+    margin:10px auto;
+}
+#open-mask--box-body img{
+    width:20px;
+    height:20px;
+    margin-left:20%;
+}
+#open-mask--box-body label{
+    color:white;
+    font-weight:500;
+    display: inline-block;
+    height:15%;
+    margin-bottom:0;
+    margin-top:10px;
+    margin-left:20%;
+}
+#box-body-title{
+    font-weight:500;
+    color:white;
+    font-size:18px;
+    display: inline-block;
+    margin-left:0;
+}
+#open-mask--box-body hr{
+    margin:5px;
+    border: 0;
+    background-color: #3F3F3F;
+    height: 1px
+}
+#open-mask-box-btn{
+    width:120px;
+    height:30px;
+    line-height:30px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    background: #5e5e5e;
+    display: inline-block;
+    color:white;
+    text-align: center;
+    margin-left:33%;
+    margin-top:10px;
+    cursor:pointer;
+}
+#open-mask-box-btn:hover{
+    background: #3F3F3F;
+}
+
+
+
+/*推荐新闻板块*/
+#relative-news{
+    height:400px;
+    width:100%;
+    margin-top:5px;
+    overflow: hidden;
+    min-width: var(--min-width);
+    border-top:1px solid #3F3F3F;
+    border-bottom:1px solid #3F3F3F;
+}
+#relative-news-title{
+    background: #5e5e5e;
+    color:white;
+    font-weight:500;
+    height:5%;
+    border:var(--border-style);
+}
+#relative-news-con-left,#relative-news-con-right{
+    width:40%;
+    margin-left:5%;
+    height:93%;
+    margin-top:2%;
+    float: left;
+}
+#relative-news-con-left a,#relative-news-con-right a{
+    display: inline-block;
+    width:100%;
+    height:40px;
+    font-size:16px;
+    line-height:40px;
+    border-bottom:1px dotted #3F3F3F;
+    color:white;
+    text-decoration: none;
+    position: relative;
+}
+#relative-news-con-left a:hover,#relative-news-con-right a:hover{
+    color:#00B7FF;
+}
+.related{
+    position: absolute;
+    right:0;
+}
+
+#fh5co-footer{
+    margin-top:50px;
+}

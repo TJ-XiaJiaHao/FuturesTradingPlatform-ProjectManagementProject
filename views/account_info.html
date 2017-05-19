@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Information</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <link rel="stylesheet" href="stylesheets/user_info.css"/>
+    <link rel="stylesheet" href="stylesheets/account_info.css"/>
+    <link rel="stylesheet" href="stylesheets/index_page.css"/>
+    <link rel="stylesheet" href="skins/minimal/red.css">
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/utility.js"></script>
+    <script src="javascripts/account_info.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <li><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+            </ul>
+            <% if (user) { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog"><%=user.email %></label>
+            <label class="username-label register none" data-toggle="modal" onclick="logout()">logout</label>
+            <% } else { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog">Register</label>
+            <label class="username-label login none" data-toggle="modal" data-target="#login-dialog">Login</label>
+            <% } %>
+        </div>
+    </div>
+</nav>
+
+<div class="container mainFrame">
+    <div class="row row-offcanvas row-offcanvas-right info-area">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12 profile">
+                        <img alt="145*145" src="images/logo.jpg" class="img-polaroid user-profile" style="border-radius: 201px;"/>
+                    </div>
+                    <div class="span12 list">
+                        <div class="item">
+                            <label  onclick="jumpToBasic()">Basic Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToAccount()">Account Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToTrade()">Trade Record</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="account_info_area">
+            <h2 style="margin-top:48px;">Account Information</h2>
+            <div class="info-left">
+                <div class="input-group account-info-height">
+                    <label class="control-label" for="name">Name</label>
+                </div>
+                <div class="input-group account-info-height">
+                    <label class="control-label" for="balance">Account Balance</label>
+                </div>
+            </div>
+
+            <div class="info-right">
+                <div class="input-group account-info-height">
+                    <input type="text" class="form-control" id="name" readonly value="<%=accountInfo.name%>">
+                </div>
+                <div class="input-group account-info-height">
+                    <input type="text" class="form-control" id="balance" readonly value="<%=accountInfo.account_balance%>">
+                </div>
+            </div>
+            <div class="col-md-9 account-table">
+                <table class="table table-striped ">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Contract ID</th>
+                        <th>Name</th>
+                        <th>Hands</th>
+                        <th>Price</th>
+                        <th>Direction</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%for(var i = 0 ; i < (accountInfo.contract_info.length > 8 ? 8 : accountInfo.contract_info.length) ; i++){%>
+                    <tr>
+                        <td><%=i+1%></td>
+                        <td><%=accountInfo.contract_info[i].contract_id%></td>
+                        <td><%=accountInfo.contract_info[i].name%></td>
+                        <td><%=accountInfo.contract_info[i].amount%></td>
+                        <td><%=accountInfo.contract_info[i].price%></td>
+                        <td><%=accountInfo.contract_info[i].open_offset%></td>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="apply-for-banlance">申请补助</div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+<footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-3 fh5co-widget my-footer">
+                <h4>Wave Team's Law</h4>
+                <ul>
+                    <li>perseverance</li>
+                    <li>determination</li>
+                    <li>circumspection</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Navigation</h4>
+                <ul class="fh5co-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="trade_home.html">Transactions</a></li>
+                    <li><a href="user_info.html">User</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Contact Information</h4>
+                <ul class="fh5co-footer-links">
+                    <li>4800 Caoan Street, <br> Tongji University</li>
+                    <li>+86 18201961136</li>
+                    <li>xiaoruiruisen@126.com</li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>About us</h4>
+                <ul class="fh5co-footer-links">
+                    <li>Software Engineering</li>
+                    <li>Senior students</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row copyright">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

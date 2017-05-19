@@ -1,0 +1,11 @@
+.news-title {
+    color: white;
+    font-family: "Myriad Pro";
+    font-size: x-large;
+}
+
+.news-content {
+    color: grey;
+    font-family: "Helvetica Neue";
+    font-size: medium;
+}

@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a0f71b6f-9125-4887-b129-f1ad592b7851" name="Default" comment="" />
+    <ignored path="untitled1.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Administrator\Desktop\tool\projects\期货分析平台\final_project\前端代码\exportToHTML" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="untitled1" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="tradeHome.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/tradeHome.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="45" column="141" selection-start-line="45" selection-start-column="133" selection-end-line="45" selection-end-column="141" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tradeHome.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/tradeHome.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2622">
+              <caret line="614" column="9" selection-start-line="575" selection-start-column="4" selection-end-line="614" selection-end-column="9" />
+              <folding>
+                <element signature="e#1070#1129#0" expanded="false" />
+                <element signature="e#1176#1234#0" expanded="false" />
+                <element signature="e#1306#1337#0" expanded="false" />
+                <element signature="e#1511#1544#0" expanded="false" />
+                <element signature="n#!!block;n#showmask#0" expanded="false" />
+                <element signature="n#!!block;n#ContractDetailRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#RelativeNewsRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#addNewHistoryTradeItem#0" expanded="false" />
+                <element signature="n#!!block;n#UpdateContractArr#0" expanded="false" />
+                <element signature="n#!!block;n#ContractTradeRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#KlineInit#0" expanded="false" />
+                <element signature="n#!!block;n#KlineRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#analyzeInit#0" expanded="false" />
+                <element signature="n#!!block;n#SetAccountBodyBanner#0" expanded="false" />
+                <element signature="n#!!block;n#SetChangeContract#0" expanded="false" />
+                <element signature="n#!!block;n#UpdateConBasicInfoWidth#0" expanded="false" />
+                <element signature="n#!!block;n#HandsRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#addHandingItem#0" expanded="false" />
+                <element signature="n#!!block;n#DoneRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#addDoneItem#0" expanded="false" />
+                <element signature="n#!!block;n#ProfileRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#addPorfileItem#0" expanded="false" />
+                <element signature="n#!!block;n#AccountRefresh#0" expanded="false" />
+                <element signature="n#!!block;n#offHands#0" expanded="false" />
+                <element signature="n#!!block;n#setSellBtn#0" expanded="false" />
+                <element signature="n#!!block;n#setBuyBtn#0" expanded="false" />
+                <marker date="1484375141963" expanded="true" signature="27923:27929" ph="..." />
+                <marker date="1484375141963" expanded="true" signature="28125:28131" ph="..." />
+                <marker date="1484375141963" expanded="true" signature="31541:31580" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="745" column="86" selection-start-line="745" selection-start-column="78" selection-end-line="745" selection-end-column="86" />
+              <folding>
+                <element signature="e#1922#3069#0" expanded="false" />
+                <element signature="e#3115#4262#0" expanded="false" />
+                <element signature="e#5472#7021#0" expanded="false" />
+                <element signature="e#7061#8607#0" expanded="false" />
+                <element signature="e#8654#10161#0" expanded="false" />
+                <element signature="e#10234#11578#0" expanded="false" />
+                <element signature="e#11651#13361#0" expanded="false" />
+                <element signature="e#13431#15002#0" expanded="false" />
+                <element signature="e#15073#16729#0" expanded="false" />
+                <element signature="e#16807#18540#0" expanded="false" />
+                <element signature="e#18618#19710#0" expanded="false" />
+                <element signature="e#19778#19785#0" expanded="false" />
+                <element signature="e#19831#21136#0" expanded="false" />
+                <element signature="e#21204#22096#0" expanded="false" />
+                <element signature="e#22172#23055#0" expanded="false" />
+                <element signature="e#23113#23119#0" expanded="false" />
+                <element signature="e#23168#23467#0" expanded="false" />
+                <element signature="e#23525#25201#0" expanded="false" />
+                <element signature="e#26718#28199#0" expanded="false" />
+                <element signature="e#28244#28321#0" expanded="false" />
+                <element signature="e#28366#29552#0" expanded="false" />
+                <element signature="e#28477#29251#0" expanded="false" />
+                <element signature="e#29614#29716#0" expanded="false" />
+                <element signature="e#29765#31028#0" expanded="false" />
+                <element signature="e#31078#32289#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_info.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/user_info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1358">
+              <caret line="41" column="49" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account_info.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/account_info.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-138">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_info.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/user_info.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="116" column="31" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="www" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/routes/express_demo.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/newsHome.html" />
+        <option value="$PROJECT_DIR$/express_demo.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/newHome.css" />
+        <option value="$PROJECT_DIR$/kline.html" />
+        <option value="$PROJECT_DIR$/tradeHome.html" />
+        <option value="$PROJECT_DIR$/lld.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/kline.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/routes/tradeHome.js" />
+        <option value="$PROJECT_DIR$/routes/tradeome.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/tradeInfo.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/news_search.css" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/common.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/utility.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/user_info.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/trade_record.css" />
+        <option value="$PROJECT_DIR$/views/user_info.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/public.css" />
+        <option value="$PROJECT_DIR$/public/stylesheets/index_page.css" />
+        <option value="$PROJECT_DIR$/views/news.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/news_detail.css" />
+        <option value="$PROJECT_DIR$/views/trade_record.html" />
+        <option value="$PROJECT_DIR$/views/trade_home.html" />
+        <option value="$PROJECT_DIR$/views/test.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/user_info.js" />
+        <option value="$PROJECT_DIR$/views/account_info.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/account_info.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/account_info.js" />
+        <option value="$PROJECT_DIR$/views/news_search.html" />
+        <option value="$PROJECT_DIR$/views/tradeHome.html" />
+        <option value="$PROJECT_DIR$/public/stylesheets/tradeHome.css" />
+        <option value="$PROJECT_DIR$/views/news_detail.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/tradeHome.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-329" />
+    <option name="y" value="127" />
+    <option name="width" value="1378" />
+    <option name="height" value="742" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="前端完整版（带后端）" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="D:/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="0.10.32" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="D:\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/webstorm/project/期货交易界面 by xjh(初步完成，浏览器为谷歌)/views/tradeHome.html&#10;20%;&#9;null&#9;null" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\前 2\public\stylesheets" />
+      <recent name="C:\Users\Administrator\Desktop\前 2\public\images" />
+      <recent name="D:\webstorm\project\期货交易界面 by xjh(初步完成，浏览器为谷歌)\routes" />
+      <recent name="D:\webstorm\project\期货交易界面 by xjh(初步完成，浏览器为谷歌)\public\stylesheets" />
+      <recent name="D:\webstorm\project\期货交易界面 by xjh(初步完成，浏览器为谷歌)\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\webstorm\project\期货交易界面 by xjh(初步完成，浏览器为谷歌)\public\javascripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.bin\www">
+    <configuration default="false" name="express_demo.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/routes/express_demo.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="index.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/routes">
+      <method />
+    </configuration>
+    <configuration default="false" name="tradeHome.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/期货交易界面 by xjh(初步完成，浏览器为谷歌)/views/tradeHome.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/前端代码/views/test.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.bin\www" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.express_demo.js" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.index.js" />
+      <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.tradeHome.html" />
+      <item index="5" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.tradeHome.html" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.index.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.express_demo.js" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a0f71b6f-9125-4887-b129-f1ad592b7851" name="Default" comment="" />
+      <created>1480677538433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1480677538433</updated>
+      <workItem from="1480677540013" duration="4743000" />
+      <workItem from="1480682344610" duration="3426000" />
+      <workItem from="1480768492843" duration="20000" />
+      <workItem from="1480920721367" duration="4067000" />
+      <workItem from="1480936785377" duration="646000" />
+      <workItem from="1480937453119" duration="1964000" />
+      <workItem from="1480940383857" duration="3367000" />
+      <workItem from="1480948886279" duration="2388000" />
+      <workItem from="1481011896142" duration="162000" />
+      <workItem from="1481013748465" duration="5500000" />
+      <workItem from="1481032174015" duration="913000" />
+      <workItem from="1481076336730" duration="176000" />
+      <workItem from="1481078046575" duration="1309000" />
+      <workItem from="1481085682373" duration="500000" />
+      <workItem from="1481086229322" duration="5560000" />
+      <workItem from="1481095381279" duration="3090000" />
+      <workItem from="1481098516155" duration="313000" />
+      <workItem from="1481114064841" duration="1184000" />
+      <workItem from="1481122173976" duration="190000" />
+      <workItem from="1481122472773" duration="22000" />
+      <workItem from="1481252928331" duration="2454000" />
+      <workItem from="1481257645939" duration="107000" />
+      <workItem from="1481257776965" duration="272000" />
+      <workItem from="1481364435679" duration="4606000" />
+      <workItem from="1481369081953" duration="6649000" />
+      <workItem from="1481383958282" duration="38000" />
+      <workItem from="1481384030871" duration="78000" />
+      <workItem from="1481431020402" duration="9676000" />
+      <workItem from="1481522754300" duration="1928000" />
+      <workItem from="1481642103855" duration="783000" />
+      <workItem from="1481690750935" duration="686000" />
+      <workItem from="1481948660935" duration="16850000" />
+      <workItem from="1481976198541" duration="11441000" />
+      <workItem from="1482025831460" duration="21606000" />
+      <workItem from="1482058573569" duration="615000" />
+      <workItem from="1482066234023" duration="599000" />
+      <workItem from="1482067425603" duration="3307000" />
+      <workItem from="1482072412303" duration="53000" />
+      <workItem from="1482147414192" duration="8536000" />
+      <workItem from="1482218802074" duration="20792000" />
+      <workItem from="1482243930275" duration="461000" />
+      <workItem from="1482295494232" duration="2805000" />
+      <workItem from="1482303846037" duration="3213000" />
+      <workItem from="1482314040977" duration="16728000" />
+      <workItem from="1482384386708" duration="8223000" />
+      <workItem from="1482395636790" duration="1557000" />
+      <workItem from="1482404437078" duration="1680000" />
+      <workItem from="1482474160037" duration="11000" />
+      <workItem from="1482489427599" duration="7857000" />
+      <workItem from="1482673765835" duration="1051000" />
+      <workItem from="1482674834596" duration="18000" />
+      <workItem from="1482674862313" duration="47000" />
+      <workItem from="1482674934208" duration="3873000" />
+      <workItem from="1482680800891" duration="7000" />
+      <workItem from="1482717991658" duration="224000" />
+      <workItem from="1482729501312" duration="6353000" />
+      <workItem from="1482748489586" duration="4591000" />
+      <workItem from="1482804019288" duration="2049000" />
+      <workItem from="1482814782779" duration="6514000" />
+      <workItem from="1482844281695" duration="1447000" />
+      <workItem from="1482846131989" duration="179000" />
+      <workItem from="1483014395634" duration="15000" />
+      <workItem from="1483100421856" duration="1232000" />
+      <workItem from="1483362807371" duration="909000" />
+      <workItem from="1483519102447" duration="84000" />
+      <workItem from="1483519408274" duration="63000" />
+      <workItem from="1483523793149" duration="31000" />
+      <workItem from="1483535378020" duration="667000" />
+      <workItem from="1484117824228" duration="145000" />
+      <workItem from="1484133726558" duration="576000" />
+      <workItem from="1484134981443" duration="7022000" />
+      <workItem from="1484142676649" duration="5000" />
+      <workItem from="1484200179318" duration="1389000" />
+      <workItem from="1484204692149" duration="391000" />
+      <workItem from="1484214312007" duration="15113000" />
+      <workItem from="1484290617471" duration="4449000" />
+      <workItem from="1484304302737" duration="598000" />
+      <workItem from="1484306289910" duration="2218000" />
+      <workItem from="1484316809711" duration="597000" />
+      <workItem from="1484366263026" duration="2341000" />
+      <workItem from="1484374954494" duration="848000" />
+      <workItem from="1485323954957" duration="695000" />
+      <workItem from="1485324969245" duration="326000" />
+      <workItem from="1486282183033" duration="5000" />
+      <workItem from="1486355858416" duration="188000" />
+      <workItem from="1486356814221" duration="26000" />
+      <workItem from="1486356991507" duration="50000" />
+      <workItem from="1486357451720" duration="285000" />
+      <workItem from="1486388890233" duration="329000" />
+      <workItem from="1495161152956" duration="55000" />
+      <workItem from="1495162141311" duration="227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="260383000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-329" y="127" width="1378" height="742" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20264317" sideWeight="0.80537975" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20264317" sideWeight="0.19462025" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20907739" sideWeight="0.19587629" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20556414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41935483" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24328358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18398474" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/javascripts/tradeHome.js</url>
+          <line>199</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>359</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/public/javascripts/tradeHome.js</url>
+          <line>658</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>159</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>123</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="77" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/images/logo.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="228" column="16" selection-start-line="228" selection-start-column="16" selection-end-line="228" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/echarts.min.js" />
+    <entry file="file://$PROJECT_DIR$/lld.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/ejs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="279" column="6" selection-start-line="279" selection-start-column="6" selection-end-line="279" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/kline.js" />
+    <entry file="file://$PROJECT_DIR$/routes/express_demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="46" column="46" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/async/parallel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1057">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/priceDown.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/0.10.32/core-modules/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="337" column="14" selection-start-line="337" selection-start-column="14" selection-end-line="337" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/tradeome.js" />
+    <entry file="file://$PROJECT_DIR$/routes/tradeInfo.js" />
+    <entry file="file://$PROJECT_DIR$/views/index.jade" />
+    <entry file="file://$PROJECT_DIR$/public/images/2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="68434" selection-start-line="4" selection-start-column="68434" selection-end-line="4" selection-end-column="68434" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/newHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/newsHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="10" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="56" column="15" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/utility.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/trade_record.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/user_info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/public.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="120" column="94" selection-start-line="120" selection-start-column="94" selection-end-line="120" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/news_search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/index_page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/0.10.32/core-modules/net.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="903" column="10" selection-start-line="903" selection-start-column="10" selection-end-line="903" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/trade_record.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/news_detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/trade_home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/trade_record.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/account_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/account_info.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/news_search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="97" column="34" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/news_detail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/news_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="102" column="135" selection-start-line="102" selection-start-column="135" selection-end-line="102" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/tradeHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="647" column="23" selection-start-line="647" selection-start-column="23" selection-end-line="647" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tradeHome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="141" selection-start-line="45" selection-start-column="133" selection-end-line="45" selection-end-column="141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/tradeHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2622">
+          <caret line="614" column="9" selection-start-line="575" selection-start-column="4" selection-end-line="614" selection-end-column="9" />
+          <folding>
+            <element signature="e#1070#1129#0" expanded="false" />
+            <element signature="e#1176#1234#0" expanded="false" />
+            <element signature="e#1306#1337#0" expanded="false" />
+            <element signature="e#1511#1544#0" expanded="false" />
+            <element signature="n#!!block;n#showmask#0" expanded="false" />
+            <element signature="n#!!block;n#ContractDetailRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#RelativeNewsRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#addNewHistoryTradeItem#0" expanded="false" />
+            <element signature="n#!!block;n#UpdateContractArr#0" expanded="false" />
+            <element signature="n#!!block;n#ContractTradeRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#KlineInit#0" expanded="false" />
+            <element signature="n#!!block;n#KlineRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#analyzeInit#0" expanded="false" />
+            <element signature="n#!!block;n#SetAccountBodyBanner#0" expanded="false" />
+            <element signature="n#!!block;n#SetChangeContract#0" expanded="false" />
+            <element signature="n#!!block;n#UpdateConBasicInfoWidth#0" expanded="false" />
+            <element signature="n#!!block;n#HandsRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#addHandingItem#0" expanded="false" />
+            <element signature="n#!!block;n#DoneRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#addDoneItem#0" expanded="false" />
+            <element signature="n#!!block;n#ProfileRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#addPorfileItem#0" expanded="false" />
+            <element signature="n#!!block;n#AccountRefresh#0" expanded="false" />
+            <element signature="n#!!block;n#offHands#0" expanded="false" />
+            <element signature="n#!!block;n#setSellBtn#0" expanded="false" />
+            <element signature="n#!!block;n#setBuyBtn#0" expanded="false" />
+            <marker date="1484375141963" expanded="true" signature="27923:27929" ph="..." />
+            <marker date="1484375141963" expanded="true" signature="28125:28131" ph="..." />
+            <marker date="1484375141963" expanded="true" signature="31541:31580" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="745" column="86" selection-start-line="745" selection-start-column="78" selection-end-line="745" selection-end-column="86" />
+          <folding>
+            <element signature="e#1922#3069#0" expanded="false" />
+            <element signature="e#3115#4262#0" expanded="false" />
+            <element signature="e#5472#7021#0" expanded="false" />
+            <element signature="e#7061#8607#0" expanded="false" />
+            <element signature="e#8654#10161#0" expanded="false" />
+            <element signature="e#10234#11578#0" expanded="false" />
+            <element signature="e#11651#13361#0" expanded="false" />
+            <element signature="e#13431#15002#0" expanded="false" />
+            <element signature="e#15073#16729#0" expanded="false" />
+            <element signature="e#16807#18540#0" expanded="false" />
+            <element signature="e#18618#19710#0" expanded="false" />
+            <element signature="e#19778#19785#0" expanded="false" />
+            <element signature="e#19831#21136#0" expanded="false" />
+            <element signature="e#21204#22096#0" expanded="false" />
+            <element signature="e#22172#23055#0" expanded="false" />
+            <element signature="e#23113#23119#0" expanded="false" />
+            <element signature="e#23168#23467#0" expanded="false" />
+            <element signature="e#23525#25201#0" expanded="false" />
+            <element signature="e#26718#28199#0" expanded="false" />
+            <element signature="e#28244#28321#0" expanded="false" />
+            <element signature="e#28366#29552#0" expanded="false" />
+            <element signature="e#28477#29251#0" expanded="false" />
+            <element signature="e#29614#29716#0" expanded="false" />
+            <element signature="e#29765#31028#0" expanded="false" />
+            <element signature="e#31078#32289#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/user_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1358">
+          <caret line="41" column="49" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/account_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-138">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/user_info.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="116" column="31" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

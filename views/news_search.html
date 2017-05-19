@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+    <link rel="stylesheet" href="stylesheets/index_page.css"/>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/news_search.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/utility.js"></script>
+    <script src="javascripts/news_search.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <% if (user) { %>
+                <li><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+                <% }  %>
+                <li>
+                <section class="container" id="fuck">
+                    <form onsubmit="submitFn(this, event);">
+                        <div class="search-wrapper">
+                            <div class="input-holder">
+                                <input type="text" class="search-input" placeholder="Type to search" />
+                                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+                            </div>
+                            <span class="close" onclick="searchToggle(this, event);"></span>
+                            <div class="result-container">
+
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <script>window.jQuery || document.write('<script src="javascripts/jquery.min.js"><\/script>')</script>
+                    <script type="text/javascript">
+                        function searchToggle(obj, evt){
+                            var container = $(obj).closest('.search-wrapper');
+
+                            if(!container.hasClass('active')){
+                                container.addClass('active');
+                                evt.preventDefault();
+                            }
+                            else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+                                container.removeClass('active');
+                                // clear input
+                                container.find('.search-input').val('');
+                                // clear and hide result container when we press close
+                                container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+                            }
+                        }
+
+                        function submitFn(obj, evt){
+                            value = $(obj).find('.search-input').val().trim();
+                            console.log("fuck");
+                            if(value.length){
+                                window.location.href='/newssearch?page=1&keyword='+value;
+                            }
+                            $(obj).find('.result-container').fadeIn(100);
+                            evt.preventDefault();
+                        }
+                    </script>
+                </li>
+            </ul>
+            <% if (user) { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog"><%=user.email %></label>
+            <label class="username-label register none" data-toggle="modal" onclick="logout()">logout</label>
+            <% } else { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog">Register</label>
+            <label class="username-label login none" data-toggle="modal" data-target="#login-dialog">Login</label>
+            <% } %>
+        </div>
+    </div>
+</nav>
+
+<div class="container full-screen">
+    <div class="row">
+        <%if(newsArr.result.length == 0){%>
+            <h3 style="color:white">新闻结果数为0，请尝试其他搜索关键字哟！</h3>
+        <%}%>
+        <%for (var i = 0; i < newsArr.result.length; i++) {%>
+        <article class="col-xs-4">
+            <div class="cards">
+                <hr class="divider" />
+                <h2 class="news-title"><%=newsArr.result[i].title.substr(0,70)%></h2>
+                <div class="info">
+                    <hr class="divider" />
+                    <p class="lead"><%=newsArr.result[i].content.substr(0,300)%></p><a class="btn btn-lg center-block" href="newsdetail?id=<%=newsArr.result[i].id%>">What's more</a>
+                </div>
+            </div>
+        </article>
+        <%}%>
+    </div>
+</div>
+
+<nav>
+    <ul class="pagination">
+
+        <li><a>&laquo;</a></li>
+        <%for(var i = 0 ; i < (newsArr.pagenum > 10 ? 10 : newsArr.pagenum); i++){%>
+        <li><a href="/newssearch?keyword=<%=keyword%>&page=<%=i+1%>" ><%=i+1%></a></li>
+        <%}%>
+        <li><a >&raquo;</a></li>
+    </ul>
+</nav>
+
+<footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-3 fh5co-widget my-footer">
+                <h4>Wave Team's Law</h4>
+                <li>perseverance</li>
+                <li>determination</li>
+                <li>circumspection</li>
+            </div>
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Navigation</h4>
+                <ul class="fh5co-footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <li><a href="#">User</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Contact Information</h4>
+                <ul class="fh5co-footer-links">
+                    <li>4800 Caoan Street, <br> Tongji University</li>
+                    <li>+86 18201961136</li>
+                    <li>xiaoruiruisen@126.com</li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>About us</h4>
+                <ul class="fh5co-footer-links">
+                    <li>Software Engineering</li>
+                    <li>Senior students</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row copyright">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="login-dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content background">
+            <div class="modal-header align-center no-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body no-border">
+                <form>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="login_username" placeholder="username">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="login_password" placeholder="password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer align-center no-border">
+                <button type="button" class="btn btn-primary" style="width: 150px" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="register-dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content background">
+            <div class="modal-header align-center no-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body no-border">
+                <div class="register-profile align-center">
+                    <img src="images/logo.jpg">
+                </div>
+                <form>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="register_username" placeholder="username">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="register_password" placeholder="password">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="confirm_password"
+                               placeholder="confirm password">
+                    </div>
+                    <div class="input-group login_input">
+                        <div class="parentCls">
+                            <input type="text" class="form-control inputElem" id="register_email" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="register_age" placeholder="age">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer align-center no-border">
+                <button type="button" class="btn btn-primary" style="width: 150px" onclick="register()">Register
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

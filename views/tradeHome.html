@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tradehome</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <link rel="stylesheet" href="stylesheets/public.css" />
+    <link rel="stylesheet" href="stylesheets/tradeHome.css" />
+
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/tradeHome.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/echarts/build/dist/echarts.js" type="text/javascript"></script>
+    <script src="javascripts/ejs.js" type="text/javascript" ></script>
+</head>
+<body>
+
+<!--nav-->
+<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li ><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <li class="active"><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+            </ul>
+            <label class="username-label welcome none">Welcome<span id="username-span"></span></label>
+            <% if (user) { %>
+                <label class="username-label register" data-toggle="modal" data-target="#register-dialog" style="line-height: 50px;"><%=user.email %></label>
+                <label class="username-label register" data-toggle="modal" onclick="logout()" style="line-height: 50px;">logout</label>
+            <% } else { %>
+                <label class="username-label register" data-toggle="modal" data-target="#register-dialog" style="line-height: 50px;">Register</label>
+                <label class="username-label login" data-toggle="modal" data-target="#login-dialog" style="line-height: 50px;">Login</label>
+            <% } %>
+        </div>
+    </div>
+</nav>
+
+
+<div id="body">
+    <div id="dv-top">
+        <div id="contract-basic-info">
+            <ul id="contract-basic-info-header">
+                <li>name</li>
+                <li>sell</li>
+                <li>buy</li>
+                <li>poundage</li>
+            </ul>
+            <div id="contract-basic-info-con">
+                <% for(var i = 0;i < (contractBasicInfoArr.length > 100 ? 100 : contractBasicInfoArr.length); i++){%>
+                    <ul class = 'contract-basic-info-con-item'>
+                        <li><%=contractBasicInfoArr[i].name%></li>
+                        <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].sell%></li>
+                        <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].buy%></li>
+                        <li><%=contractBasicInfoArr[i].point%></li>
+                    </ul>
+                <%} %>
+            </div>
+        </div>
+        <div id="contract-kline-box">
+            <div id="min-select-dv">
+                <ul>
+                    <li>周期间隔</li>
+                    <li id="min-5">5m</li>
+                    <li id="min-15">15m</li>
+                    <li id="min-30">30m</li>
+                    <li id="min-60">60m</li>
+                    <li id="day">1d</li>
+                    <li id="kline">分析</li>
+                </ul>
+            </div>
+            <ul id="contract-kline">
+
+            </ul>
+        </div>
+
+
+
+        <div id="contract-op">
+            <h3 id="contract-op-name">伦敦金</h3>
+            <div id="contract-op-sell-info">
+                <label id="contract-op-sell-price">1172.72</label>
+                <img id="contract-op-sell-info-img" src="images/priceUp.png"/>
+                <label id="contract-op-sell-info-price-up" >latest sell price</label>
+            </div>
+            <div id="contract-op-button">
+                <div id="contract-op-button-sell">
+                    <label class="name">sell</label>
+                    <label class="price">1172.47</label>
+                </div>
+                <div id="contract-op-button-buy">
+                    <label class="price">1172.97</label>
+                    <label class="name">buy</label>
+                </div>
+            </div>
+            <div id="contract-op-config">
+                <div id="config-top">
+                    <label id="config-open">open</label>
+                    <label id="config-hands-label">hands</label>
+                    <input id="config-hands-text" type="number" value="1" min="0" step="0.01"/>
+                    <label id="config-range-label">range</label>
+                    <input id="config-range-text" type="number" value="500" min="0" step="5"/>
+                </div>
+                <div id="config-bottom">
+                    <label class="config-step">1</label>
+                    <label class="config-step">0.01</label>
+                    <label class="config-step">0.05</label>
+                    <label class="config-step">0.10</label>
+                    <label class="config-step">0.50</label>
+                </div>
+            </div>
+            <div id="contract-op-trade-info">
+                <label class="op-trade-info-name">highest</label>
+                <label class="op-trade-info-value" id="op-trade-info-highest"></label>
+                <label class="op-trade-info-name">open</label>
+                <label class="op-trade-info-value" id="op-trade-info-begin"></label>
+                <label class="op-trade-info-name">lowest</label>
+                <label class="op-trade-info-value" id="op-trade-info-lowest"></label>
+                <label class="op-trade-info-name" >yesClose</label>
+                <label class="op-trade-info-value" id = "op-trade-info-closed"></label>
+                <label class="op-trade-info-name" >volume</label>
+                <label class="op-trade-info-value" id="op-trade-info-open-interest"></label>
+                <label class="op-trade-info-name" >hands</label>
+                <label class="op-trade-info-value" id = "op-trade-info-volume"></label>
+            </div>
+            <div id="contract-op-trade-history">
+                <div id="contract-op-history-header">
+                    <label id="history-title-time">Time（Beijing）</label>
+                    <label id="history-title-price">Price</label>
+                </div>
+                <div id="contract-op-history-con"></div>
+            </div>
+        </div>
+    </div>
+    <div id="account-info">
+        <div id="account-header">Account Info</div>
+        <div id="account-body">
+            <div id="account-basic-info">
+                <label class="account-basic-info-name">account</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">banlance</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">net value</label>
+                <label class="account-basic-info-value" id="netWorth"></label>
+                <label class="account-basic-info-name">hands deposit</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">occ deposit</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">avai funds</label>
+                <label class="account-basic-info-value"></label>
+                <label class="account-basic-info-name">profit</label>
+                <label class="account-basic-info-value" id="profit"></label>
+                <label class="account-basic-info-name">deposit level</label>
+                <label class="account-basic-info-value"></label>
+            </div>
+            <div id="account-total-info">
+                <ul id="account-total-info-header">
+                    <li>Hands</li>
+                    <li>History Deal</li>
+                    <li>History profit</li>
+                </ul>
+                <ul id="account-total-info-body">
+                    <li id = "handing-li" class="account-total-info-body-li">
+                        <div id="dv-handing-table">
+                            <table id="handing-table" border="1">
+                                <tr id="handing-title-head">
+                                    <td class="handing-title-th">product</td>
+                                    <td class="handing-title-th">directory</td>
+                                    <td class="handing-title-th">hands</td>
+                                    <td class="handing-title-th">open price</td>
+                                    <td class="handing-title-th">deal price</td>
+                                    <td class="handing-title-th">stop loss</td>
+                                    <td class="handing-title-th">stop win</td>
+                                    <td class="handing-title-th">rebate</td>
+                                    <td class="handing-title-th">interest</td>
+                                    <td class="handing-title-th">profit</td>
+                                    <td class="handing-title-th">time</td>
+                                    <td class="handing-title-th">order</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li id = "done-li" class="account-total-info-body-li">
+                        <div id="dv-done-table">
+                            <table id="done-table" border="1">
+                                <tr id="done-title-head">
+                                    <td class="done-title-th">deal ID</td>
+                                    <td class="done-title-th">hand ID</td>
+                                    <td class="done-title-th">product</td>
+                                    <td class="done-title-th">type</td>
+                                    <td class="done-title-th">classifications</td>
+                                    <td class="done-title-th">dir</td>
+                                    <td class="done-title-th">hands</td>
+                                    <td class="done-title-th">rebate</td>
+                                    <td class="done-title-th">deal price</td>
+                                    <td class="done-title-th">time</td>
+                                    <td class="done-title-th">note</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li id = "profile-li" class="account-total-info-body-li">
+                        <div id="dv-profile-table">
+                            <table id="profile-table" border="1">
+                                <tr id="profile-title-head">
+                                    <td class="profile-title-th">product</td>
+                                    <td class="profile-title-th">open dir</td>
+                                    <td class="profile-title-th">hands</td>
+                                    <td class="profile-title-th">open price</td>
+                                    <td class="profile-title-th">deal price</td>
+                                    <td class="profile-title-th">interest</td>
+                                    <td class="profile-title-th">rebate</td>
+                                    <td class="profile-title-th">profit</td>
+                                    <td class="profile-title-th">deal ID</td>
+                                    <td class="profile-title-th">hands ID</td>
+                                    <td class="profile-title-th">open time</td>
+                                    <td class="profile-title-th">deal time</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="contract-detail">
+        <div id="contract-detail-header">Contract Details</div>
+        <div id="contract-detail-table-dv">
+            <table id="contract-detail-table" border="1">
+                <tr>
+                    <td class="contract-detail-table-name" width="5%">Name </td>
+                    <td width="12%"> </td>
+                    <td class="contract-detail-table-name" width="5%">Trade Unit </td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">Price Unit </td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">Min Change Price Unit</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">Limit Up Unit </td>
+                    <td width="27%"></td>
+                </tr>
+                <tr>
+                    <td class="contract-detail-table-name">Delivery Month </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Trading Time	 </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Last Trade Date </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Last Delivery Date </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Delivery Grade </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="contract-detail-table-name">Trade Margin Ratio </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Trade Commi </td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Delivery Method</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Contract Object</td>
+                    <td></td>
+                    <td class="contract-detail-table-name">Exchange CD </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="relative-news">
+        <div id="relative-news-title">Relative News</div>
+        <div id="relative-news-con-left">
+
+        </div>
+        <div id="relative-news-con-right">
+        </div>
+    </div>
+</div>
+
+<footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-3 fh5co-widget my-footer">
+                <h4>Wave Team's Law</h4>
+                <ul>
+                    <li>perseverance</li>
+                    <li>determination</li>
+                    <li>circumspection</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Navigation</h4>
+                <ul class="fh5co-footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="trade_home.html">Transactions</a></li>
+                    <li><a href="user_info.html">User</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Contact Information</h4>
+                <ul class="fh5co-footer-links">
+                    <li>4800 Caoan Street, <br> Tongji University</li>
+                    <li>+86 18201961136</li>
+                    <li>xiaoruiruisen@126.com</li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>About us</h4>
+                <ul class="fh5co-footer-links">
+                    <li>Software Engineering</li>
+                    <li>Senior students</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row copyright">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<!--mask-->
+<div id="open-mask">
+    <div id="open-mask-box">
+        <div id="open-mask-box-title"><label>闪电下单</label></div>
+        <div id="open-mask--box-body">
+            <img src="images/打勾.png"/>
+            <h1 id="box-body-title">市价开仓成功</h1>
+            <hr>
+            <label>2016-12-06 16:39:36</label>
+            <hr>
+            <label>伦敦金 卖 1 手 @1172.47</label>
+            <hr>
+            <label>成交号：12793648</label>
+            <hr>
+        </div>
+        <buttom id="open-mask-box-btn">CLOSE</buttom>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="login-dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content background">
+            <div class="modal-header align-center no-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body no-border">
+                <form>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="login_username" placeholder="username">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="login_password" placeholder="password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer align-center no-border">
+                <button type="button" class="btn btn-primary" style="width: 150px" onclick="login()">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="register-dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content background">
+            <div class="modal-header align-center no-border">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body no-border">
+                <div class="register-profile align-center">
+                    <img src="images/logo.jpg">
+                </div>
+                <form>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="register_username" placeholder="username">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="register_password" placeholder="password">
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="password" class="form-control" id="confirm_password"
+                               placeholder="confirm password">
+                    </div>
+                    <div class="input-group login_input">
+                        <div class="parentCls">
+                            <input type="text" class="form-control inputElem" id="register_email" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="input-group login_input">
+                        <input type="text" class="form-control" id="register_age" placeholder="age">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer align-center no-border">
+                <button type="button" class="btn btn-primary" style="width: 150px" onclick="register()">Register
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

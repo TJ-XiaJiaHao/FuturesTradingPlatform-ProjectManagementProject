@@ -1,0 +1,21 @@
+.news-title {
+    color: white;
+    font-family: "Myriad Pro";
+    font-size: 300%;
+    height: 80px;
+}
+
+.news-intro {
+    color: lightgrey;
+    font-family: "Helvetica Neue";
+    font-size: large;
+    font-style: italic;
+    height: 50px;
+    cursor:pointer;
+}
+
+.news-content {
+    color: grey;
+    font-family: "Helvetica Neue";
+    font-size: medium;
+}

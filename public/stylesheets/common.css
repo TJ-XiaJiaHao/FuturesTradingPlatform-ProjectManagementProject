@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Axure Handwriting, sans-serif;
+    background-color: #111314 !important;
+}
+
+/*变量声明*/
+:root {
+    --min-width: 800px;
+    --width-per: 85%;
+}
+
+/*header*/
+.height {
+    height: 50px;
+    width: 100%;
+    min-width: var(--min-width);
+}
+
+.title {
+    height: 43px;
+    width: 75%;
+    min-width: var(--min-width);
+    text-align: center;
+    padding: 0 15px;
+}
+
+.title h4 {
+    background: #efefef;
+    line-height: 43px;
+}
+
+/*table*/
+#table {
+    width: var(--width-per);
+    min-width: var(--min-width);
+    margin: 10px auto;
+}
+
+.trade-table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.trade-table thead {
+    color: antiquewhite;
+    background: #555555;
+}
+
+.username-label {
+    float: right;
+    font-size: 20px;
+    height: 100%;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.username-label span {
+    margin-left: 20px;
+    color: blue;
+}
+
+.account_info_area {
+    padding-top: 1px;
+    margin: 100px 20%;
+    width: 60%;
+    height: 800px;
+    border-radius: 20px;
+    background: #eeeeee;
+    position: relative;
+}
+
+.navbar-my {
+    color: #eadddd !important;
+}
+
+.account_info_area h2 {
+    text-align: center;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.no-border {
+    border: 0;
+}
+
+.background {
+    background: #eeeeee;
+}
+
+.none {
+    display: none;
+}
+
+.my-footer {
+    color: #f3e3e3;
+}
+
+/*
+overwrite for bootsrtap css
+ */
+.navbar-default {
+    border-color: #e14c68 !important;
+}
+
+.navbar-nav > li > a,
+.navbar-default .navbar-brand {
+    color: #eadddd !important;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    background: #717f81 !important;
+}
