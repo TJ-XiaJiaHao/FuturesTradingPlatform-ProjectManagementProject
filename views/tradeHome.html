@@ -5,16 +5,16 @@
     <title>tradehome</title>
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
     <link rel="stylesheet" href="stylesheets/common.css">
-    <link rel="stylesheet" href="stylesheets/public.css" />
-    <link rel="stylesheet" href="stylesheets/tradeHome.css" />
+    <link rel="stylesheet" href="stylesheets/public.css"/>
+    <link rel="stylesheet" href="stylesheets/tradeHome.css"/>
 
     <script src="javascripts/jquery.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/tradeHome.js"></script>
     <script src="javascripts/echarts/build/dist/echarts.js" type="text/javascript"></script>
-    <script src="javascripts/ejs.js" type="text/javascript" ></script>
-    <script src="javascripts/jquery.nicescroll.js" type="text/javascript" ></script>
-    <script src="javascripts/scripts.js" type="text/javascript" ></script>
+    <script src="javascripts/ejs.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="javascripts/scripts.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -24,11 +24,14 @@
         <div id="navbar" class="navbar-collapse collapse navbar-my">
             <label class="username-label welcome none">Welcome<span id="username-span"></span></label>
             <% if (user) { %>
-                <label class="username-label register" data-toggle="modal" data-target="#register-dialog" style="line-height: 50px;"><%=user.email %></label>
-                <label class="username-label register" data-toggle="modal" onclick="logout()" style="line-height: 50px;">logout</label>
+            <label class="username-label register" data-toggle="modal" data-target="#register-dialog"
+                   style="line-height: 50px;"><%=user.email %></label>
+            <label class="username-label register" data-toggle="modal" onclick="logout()" style="line-height: 50px;">logout</label>
             <% } else { %>
-                <label class="username-label register" data-toggle="modal" data-target="#register-dialog" style="line-height: 50px;">Register</label>
-                <label class="username-label login" data-toggle="modal" data-target="#login-dialog" style="line-height: 50px;">Login</label>
+            <label class="username-label register" data-toggle="modal" data-target="#register-dialog"
+                   style="line-height: 50px;">Register</label>
+            <label class="username-label login" data-toggle="modal" data-target="#login-dialog"
+                   style="line-height: 50px;">Login</label>
             <% } %>
         </div>
     </div>
@@ -46,12 +49,12 @@
             </ul>
             <div id="contract-basic-info-con">
                 <% for(var i = 0;i < (contractBasicInfoArr.length > 100 ? 100 : contractBasicInfoArr.length); i++){%>
-                    <ul class = 'contract-basic-info-con-item'>
-                        <li><%=contractBasicInfoArr[i].name%></li>
-                        <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].sell%></li>
-                        <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].buy%></li>
-                        <li><%=contractBasicInfoArr[i].point%></li>
-                    </ul>
+                <ul class='contract-basic-info-con-item'>
+                    <li><%=contractBasicInfoArr[i].name%></li>
+                    <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].sell%></li>
+                    <li style="background:<%=contractBasicInfoArr[i].color%>"><%=contractBasicInfoArr[i].buy%></li>
+                    <li><%=contractBasicInfoArr[i].point%></li>
+                </ul>
                 <%} %>
             </div>
         </div>
@@ -72,13 +75,12 @@
         </div>
 
 
-
         <div id="contract-op">
             <h3 id="contract-op-name">伦敦金</h3>
             <div id="contract-op-sell-info">
                 <label id="contract-op-sell-price">1172.72</label>
                 <img id="contract-op-sell-info-img" src="images/priceUp.png"/>
-                <label id="contract-op-sell-info-price-up" >latest sell price</label>
+                <label id="contract-op-sell-info-price-up">latest sell price</label>
             </div>
             <div id="contract-op-button">
                 <div id="contract-op-button-sell">
@@ -113,12 +115,12 @@
                 <label class="op-trade-info-value" id="op-trade-info-begin"></label>
                 <label class="op-trade-info-name">lowest</label>
                 <label class="op-trade-info-value" id="op-trade-info-lowest"></label>
-                <label class="op-trade-info-name" >yesClose</label>
-                <label class="op-trade-info-value" id = "op-trade-info-closed"></label>
-                <label class="op-trade-info-name" >volume</label>
+                <label class="op-trade-info-name">yesClose</label>
+                <label class="op-trade-info-value" id="op-trade-info-closed"></label>
+                <label class="op-trade-info-name">volume</label>
                 <label class="op-trade-info-value" id="op-trade-info-open-interest"></label>
-                <label class="op-trade-info-name" >hands</label>
-                <label class="op-trade-info-value" id = "op-trade-info-volume"></label>
+                <label class="op-trade-info-name">hands</label>
+                <label class="op-trade-info-value" id="op-trade-info-volume"></label>
             </div>
             <div id="contract-op-trade-history">
                 <div id="contract-op-history-header">
@@ -157,7 +159,7 @@
                     <li>History profit</li>
                 </ul>
                 <ul id="account-total-info-body">
-                    <li id = "handing-li" class="account-total-info-body-li">
+                    <li id="handing-li" class="account-total-info-body-li">
                         <div id="dv-handing-table">
                             <table id="handing-table" border="1">
                                 <tr id="handing-title-head">
@@ -177,7 +179,7 @@
                             </table>
                         </div>
                     </li>
-                    <li id = "done-li" class="account-total-info-body-li">
+                    <li id="done-li" class="account-total-info-body-li">
                         <div id="dv-done-table">
                             <table id="done-table" border="1">
                                 <tr id="done-title-head">
@@ -196,7 +198,7 @@
                             </table>
                         </div>
                     </li>
-                    <li id = "profile-li" class="account-total-info-body-li">
+                    <li id="profile-li" class="account-total-info-body-li">
                         <div id="dv-profile-table">
                             <table id="profile-table" border="1">
                                 <tr id="profile-title-head">
@@ -225,39 +227,39 @@
         <div id="contract-detail-table-dv">
             <table id="contract-detail-table" border="1">
                 <tr>
-                    <td class="contract-detail-table-name" width="5%">Name </td>
-                    <td width="12%"> </td>
-                    <td class="contract-detail-table-name" width="5%">Trade Unit </td>
+                    <td class="contract-detail-table-name" width="5%">Name</td>
                     <td width="12%"></td>
-                    <td class="contract-detail-table-name" width="5%">Price Unit </td>
+                    <td class="contract-detail-table-name" width="5%">Trade Unit</td>
+                    <td width="12%"></td>
+                    <td class="contract-detail-table-name" width="5%">Price Unit</td>
                     <td width="12%"></td>
                     <td class="contract-detail-table-name" width="5%">Min Change Price Unit</td>
                     <td width="12%"></td>
-                    <td class="contract-detail-table-name" width="5%">Limit Up Unit </td>
+                    <td class="contract-detail-table-name" width="5%">Limit Up Unit</td>
                     <td width="27%"></td>
                 </tr>
                 <tr>
-                    <td class="contract-detail-table-name">Delivery Month </td>
+                    <td class="contract-detail-table-name">Delivery Month</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Trading Time	 </td>
+                    <td class="contract-detail-table-name">Trading Time</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Last Trade Date </td>
+                    <td class="contract-detail-table-name">Last Trade Date</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Last Delivery Date </td>
+                    <td class="contract-detail-table-name">Last Delivery Date</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Delivery Grade </td>
+                    <td class="contract-detail-table-name">Delivery Grade</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="contract-detail-table-name">Trade Margin Ratio </td>
+                    <td class="contract-detail-table-name">Trade Margin Ratio</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Trade Commi </td>
+                    <td class="contract-detail-table-name">Trade Commi</td>
                     <td></td>
                     <td class="contract-detail-table-name">Delivery Method</td>
                     <td></td>
                     <td class="contract-detail-table-name">Contract Object</td>
                     <td></td>
-                    <td class="contract-detail-table-name">Exchange CD </td>
+                    <td class="contract-detail-table-name">Exchange CD</td>
                     <td></td>
                 </tr>
             </table>
@@ -288,38 +290,32 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="login-dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content background">
-            <div class="modal-header align-center no-border">
+            <div class="modal-content-title"><label>LOGIN</label>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body no-border">
-                <form>
-                    <div class="input-group login_input">
-                        <input type="text" class="form-control" id="login_username" placeholder="username">
-                    </div>
-                    <div class="input-group login_input">
-                        <input type="password" class="form-control" id="login_password" placeholder="password">
-                    </div>
-                </form>
+                <label class="welcome">Welcome,Sir!</label>
+                <div class="input-group login_input">
+                    <input type="text" class="form-control" id="login-username" placeholder="username">
+                </div>
+                <div class="input-group login_input">
+                    <input type="password" class="form-control" id="login-password" placeholder="password">
+                </div>
             </div>
-            <div class="modal-footer align-center no-border">
-                <button type="button" class="btn btn-primary" style="width: 150px" onclick="login()">Login</button>
-            </div>
+                <button type="button" class="btn btn-primary btn-login" style="width: 150px">Login</button>
         </div>
     </div>
 </div>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="register-dialog">
+<div class="modal fade register" tabindex="-1" role="dialog" id="register-dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content background">
-            <div class="modal-header align-center no-border">
+            <div class="modal-content-title"><label>LOGIN</label>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-            </div>
             <div class="modal-body no-border">
-                <div class="register-profile align-center">
-                    <img src="images/logo.jpg">
-                </div>
+
                 <form>
                     <div class="input-group login_input">
                         <input type="text" class="form-control" id="register_username" placeholder="username">
@@ -332,9 +328,7 @@
                                placeholder="confirm password">
                     </div>
                     <div class="input-group login_input">
-                        <div class="parentCls">
-                            <input type="text" class="form-control inputElem" id="register_email" placeholder="email">
-                        </div>
+                        <input type="text" class="form-control inputElem" id="register_email" placeholder="email">
                     </div>
                     <div class="input-group login_input">
                         <input type="text" class="form-control" id="register_age" placeholder="age">
@@ -342,13 +336,12 @@
                 </form>
             </div>
             <div class="modal-footer align-center no-border">
-                <button type="button" class="btn btn-primary" style="width: 150px" onclick="register()">Register
+                <button type="button" class="btn btn-primary btn-register" style="width: 150px" >Register
                 </button>
             </div>
         </div>
     </div>
 </div>
-
 
 
 </body>

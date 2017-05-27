@@ -32,29 +32,42 @@ $(document).ready(function () {
     /*动态设置合约基本信息宽度*/
     UpdateConBasicInfoWidth();
 
+    /*加载账户信息*/
+    AccountRefresh();
+
+    /*点击事件初始化*/
+    eventInit();
+
+    // /*添加持仓列表*/
+    HandsRefresh();
+
+
+
+});
+
+function eventInit(){
+    /*买卖合约按钮点击效果*/
+    setSellBtn();
+    setBuyBtn();
+
     /*添加当切换合约时的特效*/
     SetChangeContract();
 
     /*设置账户信息主体部分特效*/
     SetAccountBodyBanner();
 
-    /*买卖合约按钮点击效果*/
-    setSellBtn();
-    setBuyBtn();
-
-    /*加载账户信息*/
-    AccountRefresh();
-
     /*设置5/15/30/60/1d的点击特效*/
     setCircleClick();
 
+    /*登陆相关*/
+    setLoginClick();
+    setRegisterClick();
 
-    /*其他效果*/
     $(".config-step").click(function(){
-       $("#config-hands-text").val($(this).text());
+        $("#config-hands-text").val($(this).text());
     });
     $("#open-mask-box-btn").click(function(){
-       $("#open-mask").css("visibility","hidden");
+        $("#open-mask").css("visibility","hidden");
     });
     $("#account-total-info-header").children().eq(0).click(function(){
         HandsRefresh();
@@ -65,34 +78,7 @@ $(document).ready(function () {
     $("#account-total-info-header").children().eq(2).click(function(){
         ProfileRefresh();
     });
-
-    //全屏
-    var docElm = document.getElementById("body");
-    //W3C
-    if (docElm.requestFullscreen) {
-        docElm.requestFullscreen();
-    }
-    //FireFox
-    else if (docElm.mozRequestFullScreen) {
-        docElm.mozRequestFullScreen();
-    }
-    //Chrome等
-    else if (docElm.webkitRequestFullScreen) {
-        docElm.webkitRequestFullScreen();
-    }
-    //IE11
-    else if (docElm.msRequestFullscreen) {
-        docElm.msRequestFullscreen();
-    }
-
-    // /*添加持仓列表*/
-    HandsRefresh();
-
-
-
-});
-
-
+}
 
 
 /*显示蒙版*/
@@ -869,5 +855,53 @@ function setCircleClick(){
             analyzeY = [];
             analyzeY0 = [];
         }
+    });
+}
+
+/*登陆注册*/
+function setLoginClick(){
+    $(".form-control").focusin(function(){
+        $(this).css("border","none");
+        $(this).css("border-bottom","1px solid gray");
+    });
+    $(".form-control").focusout(function(){
+        var val = $(this).val();
+        if(val == null || val == "")$(this).css("border-bottom","1px solid red");
+    });
+    $(".btn-login").click(function(){
+        var name = $("#login-username").val();
+        var password = $("#login-password").val();
+        if(name == null || name == "")$("#login-username").css("border-bottom","1px solid red");
+        else if(password == null || password == "")$("#login-password").css("border-bottom","1px solid red");
+        else alert("want to login,username:" + name + " password:" + password);
+    });
+}
+function setRegisterClick(){
+    $(".form-control").focusin(function(){
+        $(this).css("border","none");
+        $(this).css("border-bottom","1px solid gray");
+    });
+    $(".form-control").focusout(function(){
+        var val = $(this).val();
+        if(val == null || val == "")$(this).css("border-bottom","1px solid red");
+    });
+    $(".btn-register").click(function(){
+        var name            = $("#register_username").val();
+        var password        = $("#register_password").val();
+        var comfirmPassword = $("#confirm_password").val();
+        var email           = $("#register_email").val();
+        var age             = $("#register_age").val();
+
+        if(name == null || name == "")$("#register_username").css("border-bottom","1px solid red");
+        else if(password == null || password == "")$("#register_password").css("border-bottom","1px solid red");
+        else if(password != comfirmPassword)$("#confirm_password").css("border-bottom","1px solid red");
+        else if(email == null || email == "")$("#register_email").css("border-bottom","1px solid red");
+        else if(age == null || age == "")$("#register_age").css("border-bottom","1px solid red");
+        else alert("want to register" +
+                "\n username: " + name +
+                "\n password:" + password +
+                "\n comfirmPassword:" + comfirmPassword +
+                "\n email:" + email +
+                "\n age:" + age);
     });
 }
