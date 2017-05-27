@@ -5,9 +5,21 @@
 body{
     height:100%;
     widht:100%;
-    font-family: Axure Handwriting;
+    font-family:"Microsoft YaHei", sans-serif;
+}
+.container{
+    width:calc(100% - 50px);
+    min-height:600px;
 }
 
+/*导航栏*/
+.nav{
+    background: #000;
+    border:#000;
+    box-shadow: 0 0 10px gray;
+    border:1px solid gray;
+
+}
 
 
 /*变量声明*/

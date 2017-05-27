@@ -9,35 +9,19 @@
     <link rel="stylesheet" href="stylesheets/tradeHome.css" />
 
     <script src="javascripts/jquery.min.js"></script>
-    <script src="javascripts/index.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/tradeHome.js"></script>
-    <script src="javascripts/index.js"></script>
     <script src="javascripts/echarts/build/dist/echarts.js" type="text/javascript"></script>
     <script src="javascripts/ejs.js" type="text/javascript" ></script>
+    <script src="javascripts/jquery.nicescroll.js" type="text/javascript" ></script>
+    <script src="javascripts/scripts.js" type="text/javascript" ></script>
 </head>
 <body>
 
 <!--nav-->
-<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top height nav" role="navigation">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Wave Team</a>
-        </div>
         <div id="navbar" class="navbar-collapse collapse navbar-my">
-            <ul class="nav navbar-nav">
-                <li ><a href="/index">Home</a></li>
-                <li><a href="/newshome">News</a></li>
-                <li class="active"><a href="/tradehome">Transactions</a></li>
-                <li><a href="/userinfo">User</a></li>
-            </ul>
             <label class="username-label welcome none">Welcome<span id="username-span"></span></label>
             <% if (user) { %>
                 <label class="username-label register" data-toggle="modal" data-target="#register-dialog" style="line-height: 50px;"><%=user.email %></label>
@@ -80,7 +64,6 @@
                     <li id="min-30">30m</li>
                     <li id="min-60">60m</li>
                     <li id="day">1d</li>
-                    <li id="kline">分析</li>
                 </ul>
             </div>
             <ul id="contract-kline">
@@ -280,69 +263,8 @@
             </table>
         </div>
     </div>
-    <div id="relative-news">
-        <div id="relative-news-title">Relative News</div>
-        <div id="relative-news-con-left">
 
-        </div>
-        <div id="relative-news-con-right">
-        </div>
-    </div>
 </div>
-
-<footer id="fh5co-footer" role="contentinfo">
-    <div class="container">
-        <div class="row row-pb-md">
-            <div class="col-md-3 fh5co-widget my-footer">
-                <h4>Wave Team's Law</h4>
-                <ul>
-                    <li>perseverance</li>
-                    <li>determination</li>
-                    <li>circumspection</li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-md-push-1 my-footer">
-                <h4>Navigation</h4>
-                <ul class="fh5co-footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="trade_home.html">Transactions</a></li>
-                    <li><a href="user_info.html">User</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 col-md-push-1 my-footer">
-                <h4>Contact Information</h4>
-                <ul class="fh5co-footer-links">
-                    <li>4800 Caoan Street, <br> Tongji University</li>
-                    <li>+86 18201961136</li>
-                    <li>xiaoruiruisen@126.com</li>
-
-                </ul>
-            </div>
-
-            <div class="col-md-3 col-md-push-1 my-footer">
-                <h4>About us</h4>
-                <ul class="fh5co-footer-links">
-                    <li>Software Engineering</li>
-                    <li>Senior students</li>
-
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="row copyright">
-            <div class="col-md-12 text-center">
-                <p>
-                    <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
-                </p>
-            </div>
-        </div>
-
-    </div>
-</footer>
-
 
 <!--mask-->
 <div id="open-mask">

@@ -66,7 +66,26 @@ $(document).ready(function () {
         ProfileRefresh();
     });
 
-    /*添加持仓列表*/
+    //全屏
+    var docElm = document.getElementById("body");
+    //W3C
+    if (docElm.requestFullscreen) {
+        docElm.requestFullscreen();
+    }
+    //FireFox
+    else if (docElm.mozRequestFullScreen) {
+        docElm.mozRequestFullScreen();
+    }
+    //Chrome等
+    else if (docElm.webkitRequestFullScreen) {
+        docElm.webkitRequestFullScreen();
+    }
+    //IE11
+    else if (docElm.msRequestFullscreen) {
+        docElm.msRequestFullscreen();
+    }
+
+    // /*添加持仓列表*/
     HandsRefresh();
 
 
@@ -124,43 +143,11 @@ function ContractDetailRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("合约详情刷新失败!");
+            console.log("合约详情刷新失败!");
         }
     });
 }
 
-/*相关推荐新闻的刷新*/
-function RelativeNewsRefresh(){
-    $.ajax({
-        type: "post",
-        async: true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
-        url: '/RelativeNewsRefresh?name=' + nowContract,    //请求发送到TestServlet处
-        data: {},
-        dataType: "json",        //返回数据形式为json
-        success: function (result) {
-            //请求成功时执行该函数内容，result即为服务器返回的json对象
-            //alert("success");
-            if (result) {
-                $("#relative-news-con-left").html("");
-                $("#relative-news-con-right").html("");
-                var num = result.length > 16 ? 16 : result.length;
-                for(var i = 0; i < num  ; i++){
-                    if(i%2 == 0) {
-                        $("#relative-news-con-left").append("<a href='/newsdetail?id=" + result[i].id + "'> " + result[i].title + " <span class='related'>" + result[i].related +  "</span></a>");
-                    }
-                    else {
-                        $("#relative-news-con-right").append("<a href='/newsdetail?id=" + result[i].id + "'> " + result[i].title + "<span class='related'>" + result[i].related +  "</span></a>");
-                    }
-                }
-
-            }
-        },
-        error: function (errorMsg) {
-            //请求失败时执行该函数
-            alert("合约详情刷新失败!");
-        }
-    });
-}
 
 /*合约实时动态数据刷新*/
 function addNewHistoryTradeItem(time,price,color){
@@ -208,7 +195,6 @@ function ContractTradeRefresh(){
             if (result && result.length != 0) {
                 for (var i = 0; i < result.length; i++) {
                     var num = $("#contract-basic-info-con").children().length;
-
                     /*更新信息列表*/
                     for(var j = 0; j < num ; j++){
                         var items = $("#contract-basic-info-con").children().eq(j).children();
@@ -225,7 +211,6 @@ function ContractTradeRefresh(){
                     /*更新持仓列表*/
                     if($(".handing-table-" + result[i].name).length != 0) {
                         for (var n = 0; n < $(".handing-table-" + result[i].name).length; n++) {
-                            //alert($(".handing-table-" + result[i].name).eq(i).text());
                             var dir = $(".handing-table-" + result[i].name).eq(n).children().eq(1).text() == "卖出" ? -1 : 1;
 
                             var liquidation = dir == -1 ? result[i].buy : result[i].sell;
@@ -244,7 +229,6 @@ function ContractTradeRefresh(){
                             $(".handing-table-" + result[i].name).eq(n).children().eq(9).text(Math.round((liquidation - openPrice) * dir * 100) / 100);
 
                             $(".handing-table-" + result[i].name).eq(n).children().eq(9).css("color", color);
-                            //alert("name :"　+"#handing-table-" + result[i].name + "buy : " + result[i].buy);
                         }
                     }
 
@@ -267,8 +251,8 @@ function ContractTradeRefresh(){
                         $("#op-trade-info-lowest").text(result[i].lowest);
                         $("#op-trade-info-lowest").css("color",result[i].lowest > result[i].closed ? "green" : "red");
                         $("#op-trade-info-closed").text(result[i].closed);
-                        $("#op-trade-info-open-interest").text(result[i].buyRate);
-                        $("#op-trade-info-volume").text(result[i].sellRate);
+                        $("#op-trade-info-open-interest").text(result[i].volume);
+                        $("#op-trade-info-volume").text(result[i].hands);
 
 
                         /*添加一条价格变动历史*/
@@ -283,7 +267,7 @@ function ContractTradeRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("数据刷新异常！");
+            console.log("数据刷新异常！");
         }
     });
 }
@@ -385,7 +369,6 @@ function KlineRefresh(name){
     var URL;
     //if(x_data.length == 0)
     URL = "/KLineInit?name="+name + "&type=" + klineType + "&circle=" + klineCircle;
-    //alert("URL:" + URL);
     //else URL = "/KLineRefresh?name="+name+"&time="+x_data[x_data.length - 1];
     $.ajax({
         type: "post",
@@ -440,178 +423,8 @@ function KlineRefresh(name){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("图表请求数据失败!");
+            console.log("图表请求数据失败!");
             myChart.hideLoading();
-        }
-    });
-}
-
-/*分析数据画布初始化和数据加载*/
-function analyzeInit(id){
-    //alert(id);
-    require.config({
-        paths: {
-            echarts: 'javascripts/echarts/build/dist'
-        }
-    });
-
-    // 使用
-    require(
-        [
-            'echarts',
-            'echarts/chart/line'
-        ],
-        function (ec) {
-            // 基于准备好的dom，初始化echarts图表
-            myChart = ec.init(document.getElementById(id));
-
-
-            option = {
-                tooltip : {
-                    trigger: 'axis'
-                },
-                legend: {
-                    data:['分析']
-                },
-                dataZoom : {
-                    show : true,
-                    realtime: true,
-                    start : 80,
-                    end : 100
-                },
-                toolbox: {
-                    show : true,
-                    feature : {
-                        mark : {show: true},
-                        dataView : {show: true, readOnly: false},
-                        magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-                        restore : {show: true},
-                        saveAsImage : {show: true},
-
-                        dataZoom : {show: true}
-                    }
-                },
-                calculable : true,
-                xAxis : [
-                    {
-                        type : 'category',
-                        boundaryGap : false,
-                        splitLine: {show:false},
-                        data : analyzeX
-                    }
-                ],
-                yAxis : [
-                    {
-                        type: 'value',
-                        min: minY,
-                        max:maxY
-                    }
-                ],
-                series : [
-                    {
-                        name:'实际价格',
-                        type:'line',
-                        symbol:'none',
-                        itemStyle: {
-                            normal: {
-                                lineStyle: {            // 系列级个性化折线样式，横向渐变描边
-                                    width: 2,
-                                    color: (function (){
-                                        var zrColor = require('zrender/tool/color');
-                                        return zrColor.getLinearGradient(
-                                            0, 0, 1000, 0,
-                                            [[0, 'rgba(0,0,0,0.8)'],[0.8, 'rgba(255,255,255,255.8)']]
-                                        )
-                                    })(),
-                                    shadowColor : 'rgba(0,0,0,0.5)',
-                                    shadowBlur: 10,
-                                    shadowOffsetX: 8,
-                                    shadowOffsetY: 8
-                                }
-                            },
-                            emphasis : {
-                                label : {show: true}
-                            }
-                        },
-                        data:analyzeY0
-                    },
-                    {
-                        name:'预测价格',
-                        type:'line',
-                        symbol:'none',
-                        itemStyle: {
-                            normal: {
-                                lineStyle: {            // 系列级个性化折线样式，横向渐变描边
-                                    width: 2,
-                                    color: (function (){
-                                        var zrColor = require('zrender/tool/color');
-                                        return zrColor.getLinearGradient(
-                                            0, 0, 1000, 0,
-                                            [[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,0,0.8)']]
-                                        )
-                                    })(),
-                                    shadowColor : 'rgba(0,0,0,0.5)',
-                                    shadowBlur: 10,
-                                    shadowOffsetX: 8,
-                                    shadowOffsetY: 8
-                                }
-                            },
-                            emphasis : {
-                                label : {show: true}
-                            }
-                        },
-                        data:analyzeY
-                    }
-                ]
-            };
-
-
-            // 为echarts对象加载数据
-            myChart.setOption(option);
-        });
-
-}
-function analyzeRefresh(name){
-    myChart.showLoading();
-    var URL;
-    URL = "/analyzeInit?name="+name + "&type=" + klineCircle;
-    $.ajax({
-        type: "post",
-        async: true,            //异步请求（同步请求将会锁住浏览器，用户其他操作必须等待请求完成才可以执行）
-        url: URL,    //请求发送到TestServlet处
-        data: {},
-        dataType: "json",        //返回数据形式为json
-        success: function (result) {
-            alert("success");
-            //请求成功时执行该函数内容，result即为服务器返回的json对象
-            if (result) {
-
-                /*如果数据长度为0，说明没有相关数据*/
-                if(result.length == 0){
-                    alert("无该合约的分析数据");
-                }
-                else{
-                    minY = 10000;
-                    maxY= 0;
-                    for(var i = 0;i<result.length; i++){
-                        if(result[i].y != 0 && minY>result[i].y)minY = result[i].y;
-                        if(result[i].y != 0 && maxY<result[i].y)maxY = result[i].y;
-                        if(result[i].y0 != 0 && minY>result[i].y0)minY = result[i].y0;
-                        if(result[i].y0 != 0 && maxY>result[i].y0)maxY = result[i].y0;
-                        analyzeX.push(result[i].x);
-                        analyzeY.push(result[i].y);
-                        analyzeY0.push(result[i].y0);
-                    }
-                    minY = (minY -100).toFixed(0);
-                    maxY = (maxY+ 100).toFixed(0) ;
-
-                    analyzeInit("contract-kline");
-                }
-            }
-        },
-        error: function (errorMsg) {
-            //请求失败时执行该函数
-            alert("图表请求数据失败!");
         }
     });
 }
@@ -645,7 +458,7 @@ function SetAccountBodyBanner(){
 }
 
 /*设置合约切换动作*/
-function SetChangeContract(){
+function SetChangeContract() {
 
     /*获取合约基本信息列表的长度*/
     var num = $("#contract-basic-info-con").children().length;
@@ -679,9 +492,6 @@ function SetChangeContract(){
             /*刷新合约详情*/
             ContractDetailRefresh();
 
-            /*刷新相关新闻*/
-            RelativeNewsRefresh();
-
         });
     }
 
@@ -689,14 +499,18 @@ function SetChangeContract(){
     if($("#contract-basic-info-con").children().length != 0){
         $("#contract-basic-info-con").children().eq(0).click();
     }
+
+    console.log("Set left contract click event,contract nums:" + num);
 }
 
 /*设置合约列表的宽度*/
 function UpdateConBasicInfoWidth(){
     var num = $("#contract-basic-info-con").children().length;
     if(num > 15){
-        $("#contract-basic-info-con").css("width","110%");
+        console.log("Update left info width calc(100% + 20px)");
+        $("#contract-basic-info-con").css("width","calc(100% + 20px)");
     }
+    else console.log("Update left info width 100%");
 }
 
 
@@ -715,6 +529,7 @@ function HandsRefresh(){
         success: function (result) {
             //请求成功时执行该函数内容，result即为服务器返回的json对象
             if (result) {
+                console.log("持仓信息：" + result)
                 $("#handing-table").children().eq(0).children().eq(0).siblings().remove();
                 for (var i = 0; i < result.length; i++) {
                     var dir = result[i].dir == "卖出" ? -1 :1;
@@ -725,7 +540,7 @@ function HandsRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("持仓信息加载失败！");
+            console.log("持仓信息加载失败！");
         }
     });
 }
@@ -779,7 +594,7 @@ function DoneRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("成交信息加载失败！");
+            console.log("成交信息加载失败！");
         }
     });
 }
@@ -823,7 +638,7 @@ function ProfileRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("当日盈亏信息加载失败！");
+            console.log("当日盈亏信息加载失败！");
         }
     });
 }
@@ -876,7 +691,7 @@ function AccountRefresh(){
         },
         error: function (errorMsg) {
             //请求失败时执行该函数
-            alert("用户信息加载失败！");
+            console.log("用户信息加载失败！");
         }
     });
 }
@@ -1053,9 +868,6 @@ function setCircleClick(){
             analyzeX = [];
             analyzeY = [];
             analyzeY0 = [];
-
-            clearTimeout(KlineTimeOut);
-            analyzeRefresh(nowContract);
         }
     });
 }

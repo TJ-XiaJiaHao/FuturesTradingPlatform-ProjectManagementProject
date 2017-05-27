@@ -6,7 +6,7 @@
 body {
     height: 100%;
     width: 100%;
-    font-family: Axure Handwriting, sans-serif;
+    font-family:"Microsoft YaHei UI", Axure Handwriting, sans-serif;
     background-color: #111314 !important;
 }
 
@@ -109,7 +109,7 @@ body {
 overwrite for bootsrtap css
  */
 .navbar-default {
-    border-color: #e14c68 !important;
+    //border-color: #e14c68 !important;
 }
 
 .navbar-nav > li > a,
