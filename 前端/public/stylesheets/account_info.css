@@ -1,0 +1,77 @@
+body{
+    background-color: #111314;
+}
+.info-left {
+    font-size: 20px;
+    float: left;
+    width: 30%;
+    margin-left: 10%;
+    text-align: center;
+    height: 20%;
+}
+.mainFrame{
+    margin-top:50px;
+}
+.info-right {
+    float: left;
+    width: 60%;
+    height: 20%;
+}
+.account_info_area{
+    float:left;
+    width:72%;
+    margin:0;
+    margin-left:15px;
+    border-radius: 5px;
+}
+.info-right div {
+    width: 70%;
+}
+
+.info-right input {
+    border-radius: 20px !important;
+}
+
+.account-info-height {
+    margin: 20px;
+    height: 40px;
+}
+
+.account-info-height input{
+    text-align: center;
+}
+
+.account-table {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.account-table thead {
+    color: antiquewhite;
+    background: #555555;
+}
+
+.assistance-btn {
+    float: right;
+    padding: 0 20px;
+    border-radius: 30px;
+    height: 40px;
+    font-size: 16px;
+    position: absolute;
+    bottom:20px;
+}
+
+#apply-for-banlance{
+    width:200px;
+    height:50px;
+    line-height:50px;
+    position: absolute;
+    text-align: center;
+    bottom:10px;
+    left:42%;
+    border:1px solid black;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    border-radius:20px;
+    cursor: pointer;
+}

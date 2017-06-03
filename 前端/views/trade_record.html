@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Record</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <link rel="stylesheet" href="stylesheets/user_info.css"/>
+    <link rel="stylesheet" href="skins/minimal/red.css">
+    <link rel="stylesheet" href="stylesheets/trade_record.css"/>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/icheck.js"></script>
+    <script src="javascripts/utility.js"></script>
+    <script src="javascripts/trade_record.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <li><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+            </ul>
+            <% if (user) { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog"><%=user.email %></label>
+            <label class="username-label register none" data-toggle="modal" onclick="logout()">logout</label>
+            <% } else { %>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog">Register</label>
+            <label class="username-label login none" data-toggle="modal" data-target="#login-dialog">Login</label>
+            <% } %>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container mainFrame">
+    <div class="row row-offcanvas row-offcanvas-right info-area">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12 profile">
+                        <img alt="145*145" src="images/logo.jpg" class="img-polaroid user-profile" style="border-radius: 201px;"/>
+                    </div>
+                    <div class="span12 list">
+                        <div class="item">
+                            <label  onclick="jumpToBasic()">Basic Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToAccount()">Account Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToTrade()">Trade Record</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="account_info_area">
+            <h2 style="margin-top:48px;">Trading Record</h2>
+            <!-- <div class="input-group search-option">
+                <input type="radio" name="query-radio" id="time" value="time" checked>
+                <label for="time">time</label>
+                <input type="radio" name="query-radio" id="contract_id" value="contract_id" style="margin-left: 40%">
+                <label for="contract_id">contract_id</label>
+                <span class="glyphicon glyphicon-search search-icon"></span>
+                <input type="text" class="form-control search-input" id="search_input">
+            </div> -->
+
+            <div class="trading-record-table" id="trade_record_table">
+                <table class="table table-striped ">
+                    <thead>
+                    <tr>
+                        <th>Contract Id</th>
+                        <th>Time</th>
+                        <th>Trading Type</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                        <th>Direction</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%for(var i = 0 ; i < (tradeRecord.length > 12 ? 12 : tradeRecord.length) ; i++){%>
+                    <tr>
+                        <th><%=tradeRecord[i].contract_id%></th>
+                        <th><%=tradeRecord[i].time%></th>
+                        <th><%=tradeRecord[i].trading_type%></th>
+                        <th><%=tradeRecord[i].amount%></th>
+                        <th><%=tradeRecord[i].price%></th>
+                        <th><%=tradeRecord[i].dir%></th>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row row-pb-md">
+            <div class="col-md-3 fh5co-widget my-footer">
+                <h4>Wave Team's Law</h4>
+                <ul>
+                    <li>perseverance</li>
+                    <li>determination</li>
+                    <li>circumspection</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Navigation</h4>
+                <ul class="fh5co-footer-links">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="/tradehome">Transactions</a></li>
+                    <li><a href="/userinfo">User</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>Contact Information</h4>
+                <ul class="fh5co-footer-links">
+                    <li>4800 Caoan Street, <br> Tongji University</li>
+                    <li>+86 18201961136</li>
+                    <li>xiaoruiruisen@126.com</li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-3 col-md-push-1 my-footer">
+                <h4>About us</h4>
+                <ul class="fh5co-footer-links">
+                    <li>Software Engineering</li>
+                    <li>Senior students</li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row copyright">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>

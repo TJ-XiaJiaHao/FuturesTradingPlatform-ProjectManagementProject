@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserInfo Page</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/common.css">
+    <link rel="stylesheet" href="stylesheets/email_complete.css">
+    <link rel="stylesheet" href="stylesheets/user_info.css"/>
+    <link rel="stylesheet" href="stylesheets/index_page.css"/>
+    <link rel="stylesheet" href="skins/minimal/red.css">
+    <script src="javascripts/jquery.min.js"></script>
+    
+    <script src="javascripts/user_info.js"></script>
+    <script src="javascripts/index.js"></script>
+
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/icheck.js"></script>
+    <script src="javascripts/emailAutoComplete.js"></script>
+    <script src="javascripts/utility.js"></script>
+    </head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top height" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wave Team</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-my">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">Home</a></li>
+                <li><a href="/newshome">News</a></li>
+                <li><a href="/tradehome">Transactions</a></li>
+                <li><a href="/userinfo">User</a></li>
+            </ul>
+            <label class="username-label register none" data-toggle="modal"
+                   data-target="#register-dialog"><%=user.email %></label>
+            <label class="username-label register none" data-toggle="modal" onclick="logout()">logout</label>
+        </div>
+    </div>
+</nav>
+
+<div class="container mainFrame">
+    <div class="row row-offcanvas row-offcanvas-right info-area">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12 profile">
+                        <img alt="145*145" src="images/logo.jpg" class="img-polaroid user-profile"/>
+                    </div>
+                    <div class="span12 list">
+                        <div class="item">
+                            <label  onclick="jumpToBasic()">Basic Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToAccount()">Account Info</label>
+                        </div>
+                        <div class="item">
+                            <label onclick="jumpToTrade()">Trade Record</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <div class="jumbotron">
+                <h2 style="text-align: center;">Basic Information</h2>
+                <form class="form-horizontal">
+                    <div class="info-left">
+                        <div class="input-group">
+                            <label class="control-label" for="username">UserName</label>
+                        </div>
+                        <div class="input-group">
+                            <label class="control-label">Sex</label>
+                        </div>
+                        <div class="input-group">
+                            <label class="control-label" for="age">Age</label>
+                        </div>
+                        <div class="input-group">
+                            <label class="control-label" for="email">Email</label>
+                        </div>
+                    </div>
+
+                    <div class="info-right">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="username" placeholder="Username" value='<%= userinfo.username %>'>
+
+                        </div>
+                        <div class="input-group sex-group">
+                            <% if (userinfo.gender == 0) { %>
+                                <input type="radio" name="sex-radio" id="male" value="male"  style="margin-left: 5%;" checked>
+                                <label for="male" >male</label>
+                                <input type="radio" name="sex-radio" id="female" value="female" style="margin-left: 40%">
+                                <label for="female">female</label>
+                            <% } else {%>
+                                <input type="radio" name="sex-radio" id="male" value="male"  style="margin-left: 5%">
+                                <label for="male" >male</label>
+                                <input type="radio" name="sex-radio" id="female" value="female" style="margin-left: 40%" checked>
+                                <label for="female">female</label>
+                            <%} %>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="age" placeholder="Age" value='<%= userinfo.age %>'>
+                        </div>
+                        <div class="input-group">
+                            <div class="parentCls">
+                                <input type="text" class="form-control inputElem" id="email" placeholder="Email" value='<%= userinfo.email %>' readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-default" id="confirm">confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="fh5co-footer" role="contentinfo">
+        <div class="container">
+            <div class="row row-pb-md">
+                <div class="col-md-3 fh5co-widget my-footer">
+                    <h4>Wave Team's Law</h4>
+                    <ul>
+                        <li>perseverance</li>
+                        <li>determination</li>
+                        <li>circumspection</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-md-push-1 my-footer">
+                    <h4>Navigation</h4>
+                    <ul class="fh5co-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="trade_home.html">Transactions</a></li>
+                        <li><a href="user_info.html">User</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-md-push-1 my-footer">
+                    <h4>Contact Information</h4>
+                    <ul class="fh5co-footer-links">
+                        <li>4800 Caoan Street, <br> Tongji University</li>
+                        <li>+86 18201961136</li>
+                        <li>xiaoruiruisen@126.com</li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-md-push-1 my-footer">
+                    <h4>About us</h4>
+                    <ul class="fh5co-footer-links">
+                        <li>Software Engineering</li>
+                        <li>Senior students</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row copyright">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small class="block my-footer">Copyright &copy; 2017.Wave Team All rights reserved.</small>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
